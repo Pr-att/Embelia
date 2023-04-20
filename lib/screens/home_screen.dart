@@ -28,11 +28,11 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: colors.primaryColor,
+                color: MyColor.primaryColor,
               ), child: null,
             ),
             ElevatedButton(onPressed: () {
-              Navigator.of(context).pushNamed('FAQ.id');
+              Navigator.of(context).pushNamed(FAQ.id);
             }, child: const Text("FAQ")),
             IconButton(
               onPressed: () {
@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       appBar: AppBar(
         flexibleSpace: Container(
-          color: colors.primaryColor,
+          color: MyColor.primaryColor,
         ),
         actions: const [],
       ),

@@ -11,7 +11,7 @@ class MyRouter {
       case InitialScreen.id:
         return MaterialPageRoute(builder: (_) => const InitialScreen());
         case FAQ.id:
-        return MaterialPageRoute(builder: (_) => FAQ());
+        return MaterialPageRoute(builder: (_) => const FAQ());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

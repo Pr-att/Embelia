@@ -18,8 +18,8 @@ const kGradient = LinearGradient(colors: <Color>[
   Color(0xff000000),
 ], );
 
-class colors {
-  static const Color primaryColor = Color(0xffd4d5e2);
+class MyColor {
+  static const Color primaryColor = Color(0xfff9e7ed);
   static const Color secondaryColor = Color(0xff150050);
   static const Color tertiaryColor = Color(0xff000000);
   static const Color quaternaryColor = Color(0xff000000);

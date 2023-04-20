@@ -19,10 +19,13 @@ class _FAQState extends State<FAQ> {
     http.Response res = await http.get(
       Uri.parse("$uri/$question"),
     );
-    if (res.statusCode == 200) {
-      return jsonDecode(res.body);
-    } else {
-      return "Error";
+    switch (res.statusCode) {
+      case 200:
+        return jsonDecode(res.body);
+      case 404:
+        return "Not Found";
+      default:
+        return "Error";
     }
   }
 
@@ -30,74 +33,83 @@ class _FAQState extends State<FAQ> {
   String _answer = "Mental Health";
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            "FAQ",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          backgroundColor: colors.primaryColor,
+      appBar: AppBar(
+        title: const Text(
+          "FAQ",
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Card(
-                  shape: const RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.black, width: 2),
+        backgroundColor: MyColor.primaryColor,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Card(
+                shape: const RoundedRectangleBorder(
+                  side: BorderSide(color: Colors.black, width: 2),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
+                child: ListTile(
+                  title: Align(
+                    alignment: Alignment.center,
+                    child: Text(_answer),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              TextFormField(
+                controller: _controller,
+                decoration: const InputDecoration(
+                  hintText: "Write your query here ...",
+                  labelText: "Query",
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black, width: 2),
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
-                  child: ListTile(
-                    title: Align(
-                        alignment: Alignment.center, child: Text(_answer)),
-                  ),
                 ),
-                const SizedBox(height: 10),
-                TextFormField(
-                  controller: _controller,
-                  decoration: const InputDecoration(
-                    hintText: "Write your query here ...",
-                    labelText: "Query",
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black, width: 2),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(
-                        Radius.circular(10),
+                        Radius.circular(30),
                       ),
                     ),
+                    side: const BorderSide(color: Colors.black, width: 2),
                   ),
+                  onPressed: () async {
+                    var response = await getFAQAnswer(_controller.text);
+                    if (_controller.text.isEmpty) {
+                      return;
+                    }
+                    _answer = response;
+                    setState(() {});
+                  },
+                  child: const Icon(Icons.search),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(30),
-                        ),
-                      ),
-                      side: const BorderSide(color: Colors.black, width: 2),
-                    ),
-                    onPressed: () async {
-                      var response = await getFAQAnswer(_controller.text);
-                      if (_controller.text.isEmpty) {
-                        return;
-                      }
-                      _answer = response;
-                      setState(() {});
-                    },
-                    child: const Icon(Icons.search),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

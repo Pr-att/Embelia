@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: MyRouter.generateRoute,
       theme: ThemeData.light(useMaterial3: true),
       debugShowCheckedModeBanner: false,
-      initialRoute: FAQ.id,
+      initialRoute: HomeScreen.id,
     );
   }
 }
