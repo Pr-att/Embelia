@@ -1,0 +1,200 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.pratyush.embelia"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:3:5-66
+15-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:3:22-64
+16    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+16-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:4:5-71
+16-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:4:22-69
+17    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+17-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:5:5-70
+17-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:5:22-68
+18    <uses-permission android:name="android.permission.BLUETOOTH" />
+18-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:7:5-67
+18-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:7:22-65
+19    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+19-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:8:5-73
+19-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:8:22-71
+20    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+20-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:9:5-75
+20-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:9:22-73
+21
+22    <queries>
+22-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:10:5-23:15
+23        <intent>
+23-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:11:9-13:18
+24            <action android:name="android.speech.RecognitionService" />
+24-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:12:13-72
+24-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:12:21-69
+25        </intent>
+26        <intent>
+26-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:14:9-17:18
+27            <action android:name="android.intent.action.VIEW" />
+27-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:15:13-65
+27-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:15:21-62
+28
+29            <data android:scheme="sms" />
+29-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:16:13-42
+29-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:16:19-39
+30        </intent>
+31        <!-- If your app checks for call support -->
+32        <intent>
+32-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:19:9-22:18
+33            <action android:name="android.intent.action.VIEW" />
+33-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:15:13-65
+33-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:15:21-62
+34
+35            <data android:scheme="tel" />
+35-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:16:13-42
+35-->P:\MajorProject\Embelia\android\app\src\main\AndroidManifest.xml:16:19-39
+36        </intent>
+37    </queries> <!-- suppress DeprecatedClassUsageInspection -->
+38    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+38-->[androidx.biometric:biometric:1.1.0] C:\Users\pratt\.gradle\caches\transforms-3\df85a0a5fd2057b61377281a7ecd0d0e\transformed\biometric-1.1.0\AndroidManifest.xml:27:5-74
+38-->[androidx.biometric:biometric:1.1.0] C:\Users\pratt\.gradle\caches\transforms-3\df85a0a5fd2057b61377281a7ecd0d0e\transformed\biometric-1.1.0\AndroidManifest.xml:27:22-71
+39
+40    <permission
+40-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\6710ee2e3546b398da00e75003abfc33\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+41        android:name="com.pratyush.embelia.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+41-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\6710ee2e3546b398da00e75003abfc33\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+42        android:protectionLevel="signature" />
+42-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\6710ee2e3546b398da00e75003abfc33\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+43
+44    <uses-permission android:name="com.pratyush.embelia.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+44-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\6710ee2e3546b398da00e75003abfc33\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+44-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\6710ee2e3546b398da00e75003abfc33\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+45
+46    <application
+47        android:name="android.app.Application"
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\6710ee2e3546b398da00e75003abfc33\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+49        android:debuggable="true"
+50        android:icon="@mipmap/ic_launcher"
+51        android:label="embelia" >
+52        <activity
+53            android:name="com.pratyush.embelia.MainActivity"
+54            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+55            android:exported="true"
+56            android:hardwareAccelerated="true"
+57            android:launchMode="singleTop"
+58            android:theme="@style/LaunchTheme"
+59            android:windowSoftInputMode="adjustResize" >
+60
+61            <!--
+62                 Specifies an Android theme to apply to this Activity as soon as
+63                 the Android process has started. This theme is visible to the user
+64                 while the Flutter UI initializes. After that, this theme continues
+65                 to determine the Window background behind the Flutter UI.
+66            -->
+67            <meta-data
+68                android:name="io.flutter.embedding.android.NormalTheme"
+69                android:resource="@style/NormalTheme" />
+70
+71            <intent-filter>
+72                <action android:name="android.intent.action.MAIN" />
+73
+74                <category android:name="android.intent.category.LAUNCHER" />
+75            </intent-filter>
+76        </activity>
+77        <!--
+78             Don't delete the meta-data below.
+79             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+80        -->
+81        <meta-data
+82            android:name="flutterEmbedding"
+83            android:value="2" />
+84
+85        <provider
+85-->[:image_picker_android] P:\MajorProject\Embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+86            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+86-->[:image_picker_android] P:\MajorProject\Embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+87            android:authorities="com.pratyush.embelia.flutter.image_provider"
+87-->[:image_picker_android] P:\MajorProject\Embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+88            android:exported="false"
+88-->[:image_picker_android] P:\MajorProject\Embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+89            android:grantUriPermissions="true" >
+89-->[:image_picker_android] P:\MajorProject\Embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+90            <meta-data
+90-->[:image_picker_android] P:\MajorProject\Embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
+91                android:name="android.support.FILE_PROVIDER_PATHS"
+91-->[:image_picker_android] P:\MajorProject\Embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+92                android:resource="@xml/flutter_image_picker_file_paths" />
+92-->[:image_picker_android] P:\MajorProject\Embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
+93        </provider>
+94
+95        <activity
+95-->[:url_launcher_android] P:\MajorProject\Embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+96            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+96-->[:url_launcher_android] P:\MajorProject\Embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+97            android:exported="false"
+97-->[:url_launcher_android] P:\MajorProject\Embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+98            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+98-->[:url_launcher_android] P:\MajorProject\Embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+99        <activity
+99-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:23:9-27:75
+100            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+100-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:24:13-93
+101            android:excludeFromRecents="true"
+101-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:25:13-46
+102            android:exported="false"
+102-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:26:13-37
+103            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+103-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:27:13-72
+104        <!--
+105            Service handling Google Sign-In user revocation. For apps that do not integrate with
+106            Google Sign-In, this service will never be started.
+107        -->
+108        <service
+108-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:33:9-37:51
+109            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+109-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:34:13-89
+110            android:exported="true"
+110-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:35:13-36
+111            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+111-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:36:13-107
+112            android:visibleToInstantApps="true" />
+112-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\4279d419022346fdce0248d8d5ea79a4\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:37:13-48
+113
+114        <activity
+114-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\3ff720be07735976176520d1c05fb799\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+115            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+115-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\3ff720be07735976176520d1c05fb799\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+116            android:exported="false"
+116-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\3ff720be07735976176520d1c05fb799\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+117            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+117-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\3ff720be07735976176520d1c05fb799\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+118
+119        <meta-data
+119-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\pratt\.gradle\caches\transforms-3\53954d6df10d13093dc1d46643d284f8\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:21:9-23:69
+120            android:name="com.google.android.gms.version"
+120-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\pratt\.gradle\caches\transforms-3\53954d6df10d13093dc1d46643d284f8\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:22:13-58
+121            android:value="@integer/google_play_services_version" />
+121-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\pratt\.gradle\caches\transforms-3\53954d6df10d13093dc1d46643d284f8\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:23:13-66
+122
+123        <uses-library
+123-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+124            android:name="androidx.window.extensions"
+124-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+125            android:required="false" />
+125-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+126        <uses-library
+126-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+127            android:name="androidx.window.sidecar"
+127-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+128            android:required="false" />
+128-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+129    </application>
+130
+131</manifest>

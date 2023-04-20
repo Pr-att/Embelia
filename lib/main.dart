@@ -1,6 +1,8 @@
 import 'package:embelia/authentication/user_biometric.dart';
 import 'package:embelia/buttons/elevated_button/text_input.dart';
 import 'package:embelia/chat/chat_bot.dart';
+import 'package:embelia/routes/router.dart';
+import 'package:embelia/screens/faq.dart';
 import 'package:embelia/screens/home_screen.dart';
 import 'package:embelia/screens/initial_screen.dart';
 import 'package:embelia/screens/registration_screen.dart';
@@ -27,9 +29,9 @@ Future<void> main() async {
           googleSignIn: GoogleSignIn(),
         ),
       ),
-      ChangeNotifierProvider(
-        create: (_) => HealthScore(),
-      ),
+      // ChangeNotifierProvider(
+      //   create: (_) => HealthScore(),
+      // ),
     ],
     child: const MyApp(),
   ));
@@ -43,22 +45,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      onGenerateRoute: MyRouter.generateRoute,
       theme: ThemeData.light(useMaterial3: true),
-          // .copyWith(scaffoldBackgroundColor: Pallete.whiteColor),
       debugShowCheckedModeBanner: false,
-      // initialRoute: (kLog == true)
-      //     ? ( getPassByKey(
-      //         UserAuth(googleSignIn: _googleSignIn).tempGoogleIDEmail ) == null ) ? RegistrationScreen.id : HomeScreen.id
-      //     : InitialScreen.id,
-      initialRoute: ChatBot.id,
-      routes: {
-        SplashScreen.id: (context) => const SplashScreen(),
-        InitialScreen.id: (context) => const InitialScreen(),
-        RegistrationScreen.id: (context) => RegistrationScreen(),
-        SignInScreen.id: (context) => SignInScreen(),
-        HomeScreen.id: (context) => const HomeScreen(),
-        ChatBot.id: (context) => const ChatBot(),
-      },
+      initialRoute: FAQ.id,
     );
   }
 }
