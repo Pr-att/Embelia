@@ -1,3 +1,4 @@
+import 'package:embelia/authentication/user_data.dart';
 import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends StatelessWidget {
@@ -12,22 +13,24 @@ class CustomElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton.icon(
-      icon: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        child: icon,
-      ),
-      onPressed: () {
-        myFunc();
-      },
-      style: ElevatedButton.styleFrom(
-        elevation: 1,
-        backgroundColor: const Color.fromARGB(255, 228, 222, 220),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      ),
-      label: Text(
-        myText,
-        style: const TextStyle(color: Colors.black),
+    final ScreenWidth = MediaQuery.of(context).size.width;
+    return SizedBox(
+      width: ScreenWidth / 2,
+      height: 50,
+      child: ElevatedButton.icon(
+        icon: icon,
+        onPressed: () {
+          myFunc();
+        },
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          backgroundColor: Colors.deepOrange[500],
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        ),
+        label: Text(
+          myText,
+          style: const TextStyle(color: Colors.black),
+        ),
       ),
     );
   }

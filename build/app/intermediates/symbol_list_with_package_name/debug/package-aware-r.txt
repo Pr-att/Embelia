@@ -382,6 +382,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color common_google_signin_btn_text_dark
@@ -524,6 +528,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen body_text_size
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen compat_button_inset_horizontal_material
 dimen compat_button_inset_vertical_material
 dimen compat_button_padding_horizontal_material
@@ -775,6 +781,11 @@ id auto
 id beginning
 id blocking
 id bottom
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id buttonPanel
 id center_vertical
 id checkbox
@@ -944,6 +955,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout fingerprint_dialog_layout
 layout go_to_setting
@@ -959,6 +972,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
+raw firebase_common_keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1005,7 +1019,12 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string confirm_device_credential_password
+string copy_toast_msg
 string default_error_msg
+string default_web_client_id
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string fingerprint_dialog_touch_sensor
 string fingerprint_error_hw_not_available
 string fingerprint_error_hw_not_present
@@ -1013,9 +1032,15 @@ string fingerprint_error_lockout
 string fingerprint_error_no_fingerprints
 string fingerprint_error_user_canceled
 string fingerprint_not_recognized
+string gcm_defaultSenderId
 string generic_error_no_device_credential
 string generic_error_no_keyguard
 string generic_error_user_canceled
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
+string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
@@ -1424,3 +1449,4 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
 xml flutter_image_picker_file_paths
+xml image_share_filepaths

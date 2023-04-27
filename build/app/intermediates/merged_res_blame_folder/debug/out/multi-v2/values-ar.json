@@ -1,44 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "P:\\MajorProject\\Embelia\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
+            "outputFile": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ar\\values-ar.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\53954d6df10d13093dc1d46643d284f8\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-ar\\values.xml",
+                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\e947a34c1a75845a9ea3b4b0130091ce\\transformed\\appcompat-1.2.0\\res\\values-ar\\values-ar.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "125",
-                        "endOffsets": "320"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,213,317,424,506,607,721,801,879,970,1063,1155,1249,1349,1442,1537,1630,1721,1815,1894,1999,2097,2195,2303,2403,2506,2661,2758",
+                        "endColumns": "107,103,106,81,100,113,79,77,90,92,91,93,99,92,94,92,90,93,78,104,97,97,107,99,102,154,96,81",
+                        "endOffsets": "208,312,419,501,602,716,796,874,965,1058,1150,1244,1344,1437,1532,1625,1716,1810,1889,1994,2092,2190,2298,2398,2501,2656,2753,2835"
                     },
                     "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3712",
-                        "endColumns": "129",
-                        "endOffsets": "3837"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,63",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,213,317,424,506,607,721,801,879,970,1063,1155,1249,1349,1442,1537,1630,1721,1815,1894,1999,2097,2195,2303,2403,2506,2661,6750",
+                        "endColumns": "107,103,106,81,100,113,79,77,90,92,91,93,99,92,94,92,90,93,78,104,97,97,107,99,102,154,96,81",
+                        "endOffsets": "208,312,419,501,602,716,796,874,965,1058,1150,1244,1344,1437,1532,1625,1716,1810,1889,1994,2092,2190,2298,2398,2501,2656,2753,6827"
                     }
                 },
                 {
-                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\6710ee2e3546b398da00e75003abfc33\\transformed\\core-1.9.0\\res\\values-ar\\values-ar.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "60",
-                        "startColumns": "4",
-                        "startOffsets": "6424",
-                        "endColumns": "100",
-                        "endOffsets": "6520"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\df85a0a5fd2057b61377281a7ecd0d0e\\transformed\\biometric-1.1.0\\res\\values-ar\\values-ar.xml",
+                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\0c3c3b29fe7563298eed9ffc26777b5a\\transformed\\biometric-1.1.0\\res\\values-ar\\values-ar.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -47,15 +30,15 @@
                         "endOffsets": "163,253,371,491,634,779,901,1035,1141,1281,1428,1538"
                     },
                     "to": {
-                        "startLines": "47,48,49,50,51,52,53,54,55,56,57,58",
+                        "startLines": "47,49,53,54,55,56,57,58,59,60,61,62",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4854,4967,5057,5175,5295,5438,5583,5705,5839,5945,6085,6232",
+                        "startOffsets": "4854,5067,5465,5583,5703,5846,5991,6113,6247,6353,6493,6640",
                         "endColumns": "112,89,117,119,142,144,121,133,105,139,146,109",
-                        "endOffsets": "4962,5052,5170,5290,5433,5578,5700,5834,5940,6080,6227,6337"
+                        "endOffsets": "4962,5152,5578,5698,5841,5986,6108,6242,6348,6488,6635,6745"
                     }
                 },
                 {
-                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\3ff720be07735976176520d1c05fb799\\transformed\\jetified-play-services-base-18.0.1\\res\\values-ar\\values.xml",
+                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\27ed75583d8888cfd149af38bb71ea35\\transformed\\jetified-play-services-base-18.0.1\\res\\values-ar\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -72,20 +55,54 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\c5e6066e343a23cadf0e84126bc54229\\transformed\\appcompat-1.2.0\\res\\values-ar\\values-ar.xml",
+                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\f39faed18ed24c5eda489febb99f4594\\transformed\\jetified-play-services-basement-18.2.0\\res\\values-ar\\values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,213,317,424,506,607,721,801,879,970,1063,1155,1249,1349,1442,1537,1630,1721,1815,1894,1999,2097,2195,2303,2403,2506,2661,2758",
-                        "endColumns": "107,103,106,81,100,113,79,77,90,92,91,93,99,92,94,92,90,93,78,104,97,97,107,99,102,154,96,81",
-                        "endOffsets": "208,312,419,501,602,716,796,874,965,1058,1150,1244,1344,1437,1532,1625,1716,1810,1889,1994,2092,2190,2298,2398,2501,2656,2753,2835"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "125",
+                        "endOffsets": "320"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,59",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,213,317,424,506,607,721,801,879,970,1063,1155,1249,1349,1442,1537,1630,1721,1815,1894,1999,2097,2195,2303,2403,2506,2661,6342",
-                        "endColumns": "107,103,106,81,100,113,79,77,90,92,91,93,99,92,94,92,90,93,78,104,97,97,107,99,102,154,96,81",
-                        "endOffsets": "208,312,419,501,602,716,796,874,965,1058,1150,1244,1344,1437,1532,1625,1716,1810,1889,1994,2092,2190,2298,2398,2501,2656,2753,6419"
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3712",
+                        "endColumns": "129",
+                        "endOffsets": "3837"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\50ac565c2d78ece85381646878fcb457\\transformed\\core-1.9.0\\res\\values-ar\\values-ar.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "64",
+                        "startColumns": "4",
+                        "startOffsets": "6832",
+                        "endColumns": "100",
+                        "endOffsets": "6928"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\f9d00c0ad06f3737f5584e3a1be6cac9\\transformed\\browser-1.4.0\\res\\values-ar\\values-ar.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,155,253,361",
+                        "endColumns": "99,97,107,101",
+                        "endOffsets": "150,248,356,458"
+                    },
+                    "to": {
+                        "startLines": "48,50,51,52",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "4967,5157,5255,5363",
+                        "endColumns": "99,97,107,101",
+                        "endOffsets": "5062,5250,5358,5460"
                     }
                 }
             ]

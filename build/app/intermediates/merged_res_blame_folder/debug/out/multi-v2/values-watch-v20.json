@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "P:\\MajorProject\\Embelia\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\c5e6066e343a23cadf0e84126bc54229\\transformed\\appcompat-1.2.0\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\e947a34c1a75845a9ea3b4b0130091ce\\transformed\\appcompat-1.2.0\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\4279d419022346fdce0248d8d5ea79a4\\transformed\\jetified-play-services-auth-20.5.0\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\pratt\\.gradle\\caches\\transforms-3\\3911405eeabcd43864e88eb9ac1932cc\\transformed\\jetified-play-services-auth-20.5.0\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

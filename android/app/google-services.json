@@ -1,1 +1,39 @@
-{"installed":{"client_id":"840856747821-68uj148d21kgdrbpbc82mhmcgp24pivh.apps.googleusercontent.com","project_id":"embelia-367713","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs"}}
+{
+  "project_info": {
+    "project_number": "840856747821",
+    "project_id": "embelia-367713",
+    "storage_bucket": "embelia-367713.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840856747821:android:77436dbd78472a5726dda4",
+        "android_client_info": {
+          "package_name": "com.pratyush.embelia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840856747821-8k6cke1cmg7nhlt0hmu97tim5lor0f3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHVGZq-ooJ3AERZtsch9SKmgWprRKnxww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840856747821-3875jtrl34b52h37bo847mr0r5tmu96q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

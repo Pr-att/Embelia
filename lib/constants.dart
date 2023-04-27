@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const uri = "https://cff0-2405-201-6834-3824-77-9ec0-f80c-da3f.in.ngrok.io/api/FAQ";
+const uri = "https://b3d0-103-77-186-50.in.ngrok.io/api/FAQ";
 
 extension StringCasingExtension on String {
   String toCapitalized() =>
@@ -23,4 +23,5 @@ class MyColor {
   static const Color secondaryColor = Color(0xff150050);
   static const Color tertiaryColor = Color(0xff000000);
   static const Color quaternaryColor = Color(0xff000000);
+  static const Color lightGreyShade = Color(0xffE6EDf5);
 }
