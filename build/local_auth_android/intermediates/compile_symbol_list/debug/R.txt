@@ -383,6 +383,8 @@ int color bright_foreground_material_dark 0x0
 int color bright_foreground_material_light 0x0
 int color button_material_dark 0x0
 int color button_material_light 0x0
+int color call_notification_answer_color 0x0
+int color call_notification_decline_color 0x0
 int color dim_foreground_disabled_material_dark 0x0
 int color dim_foreground_disabled_material_light 0x0
 int color dim_foreground_material_dark 0x0
@@ -394,7 +396,6 @@ int color foreground_material_light 0x0
 int color grey_text 0x0
 int color highlighted_text_material_dark 0x0
 int color highlighted_text_material_light 0x0
-int color hint_color 0x0
 int color material_blue_grey_800 0x0
 int color material_blue_grey_900 0x0
 int color material_blue_grey_950 0x0
@@ -423,7 +424,6 @@ int color secondary_text_default_material_dark 0x0
 int color secondary_text_default_material_light 0x0
 int color secondary_text_disabled_material_dark 0x0
 int color secondary_text_disabled_material_light 0x0
-int color success_color 0x0
 int color switch_thumb_disabled_material_dark 0x0
 int color switch_thumb_disabled_material_light 0x0
 int color switch_thumb_material_dark 0x0
@@ -432,7 +432,6 @@ int color switch_thumb_normal_material_dark 0x0
 int color switch_thumb_normal_material_light 0x0
 int color tooltip_background_dark 0x0
 int color tooltip_background_light 0x0
-int color warning_color 0x0
 int dimen abc_action_bar_content_inset_material 0x0
 int dimen abc_action_bar_content_inset_with_nav 0x0
 int dimen abc_action_bar_default_height_material 0x0
@@ -511,7 +510,6 @@ int dimen abc_text_size_subhead_material 0x0
 int dimen abc_text_size_subtitle_material_toolbar 0x0
 int dimen abc_text_size_title_material 0x0
 int dimen abc_text_size_title_material_toolbar 0x0
-int dimen body_text_size 0x0
 int dimen compat_button_inset_horizontal_material 0x0
 int dimen compat_button_inset_vertical_material 0x0
 int dimen compat_button_padding_horizontal_material 0x0
@@ -650,12 +648,12 @@ int drawable btn_radio_on_mtrl 0x0
 int drawable btn_radio_on_to_off_mtrl_animation 0x0
 int drawable fingerprint_dialog_error 0x0
 int drawable fingerprint_dialog_fp_icon 0x0
-int drawable fingerprint_initial_icon 0x0
-int drawable fingerprint_success_icon 0x0
-int drawable fingerprint_warning_icon 0x0
-int drawable ic_done_white_24dp 0x0
-int drawable ic_fingerprint_white_24dp 0x0
-int drawable ic_priority_high_white_24dp 0x0
+int drawable ic_call_answer 0x0
+int drawable ic_call_answer_low 0x0
+int drawable ic_call_answer_video 0x0
+int drawable ic_call_answer_video_low 0x0
+int drawable ic_call_decline 0x0
+int drawable ic_call_decline_low 0x0
 int drawable notification_action_background 0x0
 int drawable notification_bg 0x0
 int drawable notification_bg_low 0x0
@@ -745,8 +743,6 @@ int id fingerprint_description 0x0
 int id fingerprint_error 0x0
 int id fingerprint_icon 0x0
 int id fingerprint_required 0x0
-int id fingerprint_signin 0x0
-int id fingerprint_status 0x0
 int id fingerprint_subtitle 0x0
 int id forever 0x0
 int id fragment_container_view_tag 0x0
@@ -885,7 +881,6 @@ int layout notification_template_custom_big 0x0
 int layout notification_template_icon_group 0x0
 int layout notification_template_part_chronometer 0x0
 int layout notification_template_part_time 0x0
-int layout scan_fp 0x0
 int layout select_dialog_item_material 0x0
 int layout select_dialog_multichoice_material 0x0
 int layout select_dialog_singlechoice_material 0x0
@@ -917,6 +912,13 @@ int string abc_searchview_description_voice 0x0
 int string abc_shareactionprovider_share_with 0x0
 int string abc_shareactionprovider_share_with_application 0x0
 int string abc_toolbar_collapse_description 0x0
+int string call_notification_answer_action 0x0
+int string call_notification_answer_video_action 0x0
+int string call_notification_decline_action 0x0
+int string call_notification_hang_up_action 0x0
+int string call_notification_incoming_text 0x0
+int string call_notification_ongoing_text 0x0
+int string call_notification_screening_text 0x0
 int string confirm_device_credential_password 0x0
 int string default_error_msg 0x0
 int string fingerprint_dialog_touch_sensor 0x0

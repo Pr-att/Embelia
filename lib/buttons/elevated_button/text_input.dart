@@ -1,11 +1,5 @@
 import 'package:embelia/authentication/user_auth.dart';
-import 'package:embelia/screens/home_screen.dart';
-import 'package:embelia/widgets/snackbar.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../../authentication/user_data.dart';
-
-
 
 class InputTextButton extends StatefulWidget {
   static const id = "InputTextButton";
@@ -17,13 +11,12 @@ class InputTextButton extends StatefulWidget {
 
 class _InputTextButtonState extends State<InputTextButton> {
   final _formKey = GlobalKey<FormState>();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-
-    var nameListenProvider = context.watch<UserAuth>().name;
-    var emailListenProvider = context.watch<UserAuth>().tempGoogleIDEmail;
-
     return Form(
       key: _formKey,
       child: Column(
@@ -35,6 +28,7 @@ class _InputTextButtonState extends State<InputTextButton> {
                   ? 'Enter correct name'
                   : null;
             },
+            controller: _nameController,
             hintText: 'What do people call you?',
             keyboardType: TextInputType.name,
             icon: Icons.person,
@@ -49,6 +43,7 @@ class _InputTextButtonState extends State<InputTextButton> {
                   ? 'Enter correct email'
                   : null;
             },
+            controller: _emailController,
             hintText: 'Where do people email you?',
             keyboardType: TextInputType.emailAddress,
             icon: Icons.email,
@@ -65,7 +60,8 @@ class _InputTextButtonState extends State<InputTextButton> {
                 return null;
               }
             },
-            hintText: 'What do people call you?',
+            controller: _passwordController,
+            hintText: 'Enter your password',
             keyboardType: TextInputType.name,
             icon: Icons.password,
             labelText: 'Password *',
@@ -75,16 +71,14 @@ class _InputTextButtonState extends State<InputTextButton> {
             height: 10,
           ),
           TextButton(
-            onPressed: () {
+            onPressed: () async {
               if (_formKey.currentState!.validate()) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Processing Data'),
-                  ),
+                await UserAuth().signInUsingEmailPassword(
+                  email: _emailController.text,
+                  password: _passwordController.text,
+                  context: context,
+                  name: _nameController.text,
                 );
-                Provider.of<UserAuth>(context, listen: false)
-                    .signInWithGoogle();
-                Navigator.pushNamed(context, HomeScreen.id);
               }
             },
             child: const Text('Submit'),
@@ -95,49 +89,29 @@ class _InputTextButtonState extends State<InputTextButton> {
   }
 }
 
-writeData(key, value) {
-  try {
-    // myHiveBox.put(key, value);
-  } catch (err) {
-    return false;
-  }
-}
-
-readData(key) {
-  // return myHiveBox.get(key);
-}
-
-void deleteData(key) {
-  // myHiveBox.delete(key);
-}
-
-getPassByKey(key) {
-  // dynamic data = myHiveBox.get(key);
-  // return data['password'];
-}
-getPhotoByKey(key) {
-  // dynamic data = myHiveBox.get(key);
-  // return data['photoUrl'];
-}
-
-class InputButton extends StatelessWidget {
-  InputButton(
-      // {required this.onSave,
-          {super.key,
+class InputButton extends StatefulWidget {
+  const InputButton(
+      {super.key,
       required this.onValidate,
       required this.hintText,
       required this.keyboardType,
       required this.icon,
       required this.labelText,
-      required this.obsecureText});
-  // final Function(String?) onSave;
+      required this.obsecureText,
+      required this.controller});
   final String? Function(String?) onValidate;
   final String hintText;
   final String labelText;
   final TextInputType keyboardType;
   final IconData icon;
   final bool obsecureText;
+  final TextEditingController controller;
 
+  @override
+  State<InputButton> createState() => _InputButtonState();
+}
+
+class _InputButtonState extends State<InputButton> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -151,17 +125,17 @@ class InputButton extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(left: 20),
           child: TextFormField(
-            // autovalidateMode: AutovalidateMode.always,
-            obscureText: obsecureText,
+            controller: widget.controller,
+            obscureText: widget.obsecureText,
             cursorColor: Colors.deepOrange,
-            keyboardType: keyboardType,
+            keyboardType: widget.keyboardType,
             decoration: InputDecoration(
               border: InputBorder.none,
-              hintText: hintText,
-              labelText: labelText,
+              hintText: widget.hintText,
+              labelText: widget.labelText,
             ),
             // onSaved: onSave,
-            validator: onValidate,
+            validator: widget.onValidate,
           ),
         ),
       ),

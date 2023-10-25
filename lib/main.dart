@@ -1,50 +1,57 @@
+import 'package:embelia/localStorage/local_storage.dart';
 import 'package:embelia/routes/router.dart';
-import 'package:embelia/screens/home_screen.dart';
-import 'package:embelia/screens/initial_screen.dart';
-import 'package:embelia/server/mongoDB.dart';
+import 'package:embelia/screens/faq/faq_provider_cubit.dart';
+import 'package:embelia/screens/homeScreen/home_screen_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'authentication/user_auth.dart';
 
-GoogleSignIn _googleSignIn = GoogleSignIn();
+import 'authentication/cubit/user_data_firebase_cubit.dart';
+import 'authentication/user_biometric.dart';
 
+String? email;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  print("Initializing Firebase...");
+  final prefs = await LocalStorage.init();
+  email = prefs.getString("email");
   await Firebase.initializeApp();
-  print("Firebase Initialized");
-  // await MongoDB.connect();
-  // await LocalAuth.authenticate();
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider(
-        create: (_) => UserAuth(
-          googleSignIn: _googleSignIn,
+  await LocalAuth.authenticate();
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => LocalStorage(),
         ),
+      ],
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (_) => FaqProviderCubit(),
+          ),
+          BlocProvider(
+            create: (_) => UserDataFirebaseCubit(),
+          ),
+          BlocProvider(
+            create: (_) => HomeScreenCubit(),
+          ),
+        ],
+        child: const MyApp(),
       ),
-    ],
-    child: const MyApp(),
-  ));
+    ),
+  );
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // final user = _googleSignIn.currentUser?.displayName;
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      onGenerateRoute: MyRouter.generateRoute,
+    return MaterialApp.router(
       theme: ThemeData(useMaterial3: true),
       debugShowCheckedModeBanner: false,
-      // initialRoute: user != null ? HomeScreen.id : InitialScreen.id,
-      // home: const SignInScreen(),
-      initialRoute: InitialScreen.id,
+      routerConfig: router,
     );
   }
 }

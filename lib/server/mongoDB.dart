@@ -1,14 +1,49 @@
 import 'dart:developer';
-import 'package:mongo_dart/mongo_dart.dart';
-const mongoDBUrl = "mongodb+srv://pratyush-embelia:eC9cRHwus5Rr6iUb@embeliacluster.evgkcdj.mongodb.net/test?retryWrites=true&w=majority";
 
+import 'package:mongo_dart/mongo_dart.dart';
 
 class MongoDB {
-  static var db, collection;
+  static var db;
+  static String mongoDBUrl =
+      "mongodb+srv://pratyush-embelia:eC9cRHwus5Rr6iUb@embeliacluster.evgkcdj.mongodb.net/users?retryWrites=true&w=majority";
+
   static connect() async {
     db = await Db.create(mongoDBUrl);
     await db.open();
     inspect(db);
-    collection = db.collection('users');
+  }
+
+  static disconnect() async {
+    await db.close();
+  }
+
+  static doesUserExist(String email) async {
+    var collection = await db.collection(email);
+    if (collection == null) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  static insertOne(Map<dynamic, dynamic> data, String email) async {
+    var collection = await db.collection(email);
+    if (data.isNotEmpty) {
+      await collection.insertOne(data);
+    }
+  }
+
+  static deleteOne(Map<dynamic, dynamic> data, String email) async {
+    var collection = await db.collection(email);
+    await collection.deleteOne(data);
+  }
+
+  static getAll(String email) async {
+    var collection = await db.collection(email);
+    if (collection == null) {
+      return [];
+    } else {
+      return await collection.find().toList();
+    }
   }
 }

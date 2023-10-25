@@ -1,50 +1,90 @@
 [
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\drawable-v21_background.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\drawable-v21\\background.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\drawable-v21_launch_background.xml.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\drawable-v21\\launch_background.xml"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\drawable-hdpi_splash.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\drawable-hdpi\\splash.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\drawable-xhdpi_splash.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\drawable-xhdpi\\splash.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/drawable-v21_background.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/drawable-v21/background.png"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-mdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_splash.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\drawable-xxxhdpi\\splash.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xxhdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xxhdpi/ic_launcher_monochrome.png"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\drawable-mdpi_splash.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\drawable-mdpi\\splash.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/drawable-v21_launch_background.xml.flat",
+        "source": "com.pratyush.embelia.app-main-28:/drawable-v21/launch_background.xml"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\drawable-xxhdpi_splash.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\drawable-xxhdpi\\splash.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-mdpi/ic_launcher_background.png"
     },
     {
-        "merged": "P:\\MajorProject\\embelia\\build\\app\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "P:\\MajorProject\\embelia\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-hdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-hdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xxhdpi_ic_launcher_background.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-mdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-mdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-hdpi_ic_launcher_background.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xxxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xxxhdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xhdpi_ic_launcher_background.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.pratyush.embelia.app-merged_res-35:/mipmap-xhdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.pratyush.embelia.app-main-28:/mipmap-xhdpi/ic_launcher_monochrome.png"
     }
 ]

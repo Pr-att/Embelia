@@ -1,74 +1,88 @@
-import 'package:embelia/authentication/user_data.dart';
-import 'package:embelia/server/server.dart';
+import 'package:embelia/localStorage/local_storage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:provider/provider.dart';
 
-class UserAuth with ChangeNotifier {
-  var user;
-  var userPhotoUrl;
-  var name;
-  var tempGoogleIDEmail;
+import '../routes/router.dart';
+
+class UserAuth {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   static String id = "UserAuth";
+  static GoogleSignInAccount? _user;
 
-  final GoogleSignIn _googleSignIn;
-  UserAuth({required GoogleSignIn googleSignIn}) : _googleSignIn = googleSignIn;
+  static dynamic get userEmail =>
+      _user?.email ?? LocalStorage.getString('email');
+  static dynamic get userName =>
+      _user?.displayName ?? LocalStorage.getString('name');
 
-  signInWithGoogle() async {
+  set user(GoogleSignInAccount? user) {
+    _user = user;
+  }
+
+  static GoogleSignIn googleSignIn = GoogleSignIn(
+    scopes: [
+      'email',
+      'https://www.googleapis.com/auth/contacts.readonly',
+    ],
+  );
+
+  static signInWithGoogle() async {
     try {
-      user = await _googleSignIn.signIn();
-      if (user != null) {
-        name = user.displayName;
-        tempGoogleIDEmail = user.email;
-        userPhotoUrl = user.photoUrl;
-        notifyListeners();
-        return user.email;
-      }
+      _user = await googleSignIn.signIn();
     } catch (e) {
       return e;
     }
   }
 
-  checkLogin() async {
-    return await _googleSignIn.isSignedIn();
-  }
+  Future<bool> checkLogin() async => await googleSignIn.isSignedIn();
 
-  signOutFromGoogle() async {
-    user = await _googleSignIn.isSignedIn();
-    if (user) {
-      await _googleSignIn.signOut();
-      userPhotoUrl = null;
-      notifyListeners();
+  Future signOutFromGoogle() async {
+    if (await checkLogin()) {
+      await googleSignIn.signOut();
     }
   }
 
-// signUpWithGoogle(BuildContext context) async {
-//   final provider = Provider.of<UserAuth>(context, listen: false);
-//   await provider.signInWithGoogle();
-//   if (provider.user != null) {
-//     await _googleSignIn.(
-//       provider.user!.email,
-//       provider.user!.displayName,
-//       provider.user!.photoUrl,
-//       provider.user!.id,
-//     );
-//     Navigator.pop(context);
-//     Navigator.pushNamed(context, '/home');
-//   } else {
-//     Navigator.pop(context);
-//     ScaffoldMessenger.of(context).showSnackBar(
-//       const SnackBar(
-//         content: Text('Sign in failed'),
-//       ),
-//     );
-//   }
-// }
+  Future signInUsingEmailPassword(
+      {required String email,
+      required String password,
+      required BuildContext context,
+      required String name}) async {
+    await _auth
+        .signInWithEmailAndPassword(email: email, password: password)
+        .then((value) async {
+      await LocalStorage.setString('email', email).then((value) async =>
+          await LocalStorage.setString('name', name).then((value) async =>
+              GoRouter.of(context).goNamed(MyAppRouteConstants.homeScreen)));
+    }).catchError(
+      (e) async {
+        switch (e.code) {
+          case 'user-not-found':
+            await _auth
+                .createUserWithEmailAndPassword(
+                    email: email, password: password)
+                .then((value) async {
+              await LocalStorage.setString('email', email).then((value) async =>
+                  await LocalStorage.setString('name', name).then(
+                      (value) async => GoRouter.of(context)
+                          .goNamed(MyAppRouteConstants.homeScreen)));
+            });
+          case 'wrong-password':
+            return e.code;
+          default:
+            return e.code;
+        }
+        return e.code;
+      },
+    );
+  }
 }
 
 showProgress(BuildContext context) {
   return showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return const Center(child: CircularProgressIndicator());
-      });
+    context: context,
+    builder: (BuildContext context) {
+      return const Center(child: CircularProgressIndicator());
+    },
+  );
 }

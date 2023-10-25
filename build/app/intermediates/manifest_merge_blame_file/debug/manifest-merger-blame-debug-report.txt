@@ -13,311 +13,415 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:3:5-66
-15-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:3:22-64
+15-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:2:5-66
+15-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:2:22-64
 16    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-16-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:4:5-71
-16-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:4:22-69
+16-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:3:5-71
+16-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:3:22-69
 17    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-17-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:5:5-70
-17-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:5:22-68
+17-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:4:5-70
+17-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:4:22-68
 18    <uses-permission android:name="android.permission.BLUETOOTH" />
-18-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:7:5-67
-18-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:7:22-65
+18-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:6:5-67
+18-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:6:22-65
 19    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-19-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:8:5-73
-19-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:8:22-71
+19-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:7:5-73
+19-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:7:22-71
 20    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-20-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:9:5-75
-20-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:9:22-73
+20-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:8:5-75
+20-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:8:22-73
 21
 22    <queries>
-22-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:10:5-23:15
+22-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:9:5-22:15
 23        <intent>
-23-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:11:9-13:18
+23-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:10:9-12:18
 24            <action android:name="android.speech.RecognitionService" />
-24-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:12:13-72
-24-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:12:21-69
+24-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:11:13-72
+24-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:11:21-69
 25        </intent>
 26        <intent>
-26-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:14:9-17:18
+26-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:13:9-16:18
 27            <action android:name="android.intent.action.VIEW" />
-27-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:13-65
-27-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:21-62
+27-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:14:13-65
+27-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:14:21-62
 28
 29            <data android:scheme="sms" />
-29-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:16:13-42
-29-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:16:19-39
+29-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:13-42
+29-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:19-39
 30        </intent>
 31        <!-- If your app checks for call support -->
 32        <intent>
-32-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:19:9-22:18
+32-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:18:9-21:18
 33            <action android:name="android.intent.action.VIEW" />
-33-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:13-65
-33-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:21-62
+33-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:14:13-65
+33-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:14:21-62
 34
 35            <data android:scheme="tel" />
-35-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:16:13-42
-35-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:16:19-39
+35-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:13-42
+35-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:19-39
 36        </intent>
 37    </queries>
 38
-39    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- suppress DeprecatedClassUsageInspection -->
-39-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:26:5-79
-39-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:26:22-76
-40    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-40-->[androidx.biometric:biometric:1.1.0] C:\Users\pratt\.gradle\caches\transforms-3\0c3c3b29fe7563298eed9ffc26777b5a\transformed\biometric-1.1.0\AndroidManifest.xml:27:5-74
-40-->[androidx.biometric:biometric:1.1.0] C:\Users\pratt\.gradle\caches\transforms-3\0c3c3b29fe7563298eed9ffc26777b5a\transformed\biometric-1.1.0\AndroidManifest.xml:27:22-71
-41
-42    <permission
-42-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\50ac565c2d78ece85381646878fcb457\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-43        android:name="com.pratyush.embelia.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-43-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\50ac565c2d78ece85381646878fcb457\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-44        android:protectionLevel="signature" />
-44-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\50ac565c2d78ece85381646878fcb457\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-45
-46    <uses-permission android:name="com.pratyush.embelia.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-46-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\50ac565c2d78ece85381646878fcb457\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-46-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\50ac565c2d78ece85381646878fcb457\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-47
-48    <application
-49        android:name="android.app.Application"
-50        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-50-->[androidx.core:core:1.9.0] C:\Users\pratt\.gradle\caches\transforms-3\50ac565c2d78ece85381646878fcb457\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-51        android:debuggable="true"
-52        android:icon="@mipmap/ic_launcher"
-53        android:label="embelia" >
-54        <activity
-55            android:name="com.pratyush.embelia.MainActivity"
-56            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-57            android:exported="true"
-58            android:hardwareAccelerated="true"
-59            android:launchMode="singleTop"
-60            android:theme="@style/LaunchTheme"
-61            android:windowSoftInputMode="adjustResize" >
-62
-63            <!--
-64                 Specifies an Android theme to apply to this Activity as soon as
-65                 the Android process has started. This theme is visible to the user
-66                 while the Flutter UI initializes. After that, this theme continues
-67                 to determine the Window background behind the Flutter UI.
-68            -->
-69            <meta-data
-70                android:name="io.flutter.embedding.android.NormalTheme"
-71                android:resource="@style/NormalTheme" />
-72
-73            <intent-filter>
-74                <action android:name="android.intent.action.MAIN" />
-75
-76                <category android:name="android.intent.category.LAUNCHER" />
-77            </intent-filter>
-78        </activity>
-79        <!--
-80             Don't delete the meta-data below.
-81             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-82        -->
-83        <meta-data
-84            android:name="flutterEmbedding"
-85            android:value="2" />
-86
-87        <service
-87-->[:cloud_firestore] P:\MajorProject\embelia\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-88            android:name="com.google.firebase.components.ComponentDiscoveryService"
-88-->[:cloud_firestore] P:\MajorProject\embelia\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
-89            android:directBootAware="true"
-89-->[com.google.firebase:firebase-common:20.3.2] C:\Users\pratt\.gradle\caches\transforms-3\868f34f8975a511b9562f40132c95247\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:34:13-43
-90            android:exported="false" >
-90-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:68:13-37
-91            <meta-data
-91-->[:cloud_firestore] P:\MajorProject\embelia\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
-92                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-92-->[:cloud_firestore] P:\MajorProject\embelia\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
-93                android:value="com.google.firebase.components.ComponentRegistrar" />
-93-->[:cloud_firestore] P:\MajorProject\embelia\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
-94            <meta-data
-94-->[:firebase_auth] P:\MajorProject\embelia\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
-95                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-95-->[:firebase_auth] P:\MajorProject\embelia\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
-96                android:value="com.google.firebase.components.ComponentRegistrar" />
-96-->[:firebase_auth] P:\MajorProject\embelia\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
-97            <meta-data
-97-->[:firebase_core] P:\MajorProject\embelia\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
-98                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-98-->[:firebase_core] P:\MajorProject\embelia\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
-99                android:value="com.google.firebase.components.ComponentRegistrar" />
-99-->[:firebase_core] P:\MajorProject\embelia\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
-100            <meta-data
-100-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:69:13-71:85
-101                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-101-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:70:17-109
-102                android:value="com.google.firebase.components.ComponentRegistrar" />
-102-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:71:17-82
-103            <meta-data
-103-->[com.google.firebase:firebase-firestore:24.5.0] C:\Users\pratt\.gradle\caches\transforms-3\6d13278b73732c0258e6c3355c4e20ac\transformed\jetified-firebase-firestore-24.5.0\AndroidManifest.xml:19:13-21:85
-104                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-104-->[com.google.firebase:firebase-firestore:24.5.0] C:\Users\pratt\.gradle\caches\transforms-3\6d13278b73732c0258e6c3355c4e20ac\transformed\jetified-firebase-firestore-24.5.0\AndroidManifest.xml:20:17-111
-105                android:value="com.google.firebase.components.ComponentRegistrar" />
-105-->[com.google.firebase:firebase-firestore:24.5.0] C:\Users\pratt\.gradle\caches\transforms-3\6d13278b73732c0258e6c3355c4e20ac\transformed\jetified-firebase-firestore-24.5.0\AndroidManifest.xml:21:17-82
-106        </service>
-107
-108        <provider
-108-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
-109            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-109-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
-110            android:authorities="com.pratyush.embelia.flutter.image_provider"
-110-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
-111            android:exported="false"
-111-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
-112            android:grantUriPermissions="true" >
-112-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
-113            <meta-data
-113-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:75
-114                android:name="android.support.FILE_PROVIDER_PATHS"
-114-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
-115                android:resource="@xml/flutter_image_picker_file_paths" />
-115-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-72
-116        </provider>
-117
-118        <activity
-118-->[:url_launcher_android] P:\MajorProject\embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
-119            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-119-->[:url_launcher_android] P:\MajorProject\embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
-120            android:exported="false"
-120-->[:url_launcher_android] P:\MajorProject\embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
-121            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-121-->[:url_launcher_android] P:\MajorProject\embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
-122        <activity
-122-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:29:9-46:20
-123            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-123-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:30:13-80
-124            android:excludeFromRecents="true"
-124-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:31:13-46
-125            android:exported="true"
-125-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:32:13-36
-126            android:launchMode="singleTask"
-126-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:33:13-44
-127            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-127-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:34:13-72
-128            <intent-filter>
-128-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:35:13-45:29
-129                <action android:name="android.intent.action.VIEW" />
-129-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:13-65
-129-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:21-62
-130
-131                <category android:name="android.intent.category.DEFAULT" />
-131-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:38:17-76
-131-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:38:27-73
-132                <category android:name="android.intent.category.BROWSABLE" />
-132-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:39:17-78
-132-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:39:27-75
-133
-134                <data
-134-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:16:13-42
-135                    android:host="firebase.auth"
-136                    android:path="/"
-137                    android:scheme="genericidp" />
-137-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:16:19-39
-138            </intent-filter>
-139        </activity>
+39    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+39-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-81
+39-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-78
+40    <uses-permission android:name="android.permission.VIBRATE" />
+40-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-66
+40-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:8:22-63
+41    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+41-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+41-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-78
+42    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+42-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-79
+42-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-76
+43    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+43-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-77
+43-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-74
+44    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- suppress DeprecatedClassUsageInspection -->
+44-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:26:5-79
+44-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:26:22-76
+45    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+45-->[androidx.biometric:biometric:1.1.0] C:\Users\pratt\.gradle\caches\transforms-3\e81e9d748486ea7c993eb67343a5bb6b\transformed\biometric-1.1.0\AndroidManifest.xml:27:5-74
+45-->[androidx.biometric:biometric:1.1.0] C:\Users\pratt\.gradle\caches\transforms-3\e81e9d748486ea7c993eb67343a5bb6b\transformed\biometric-1.1.0\AndroidManifest.xml:27:22-71
+46
+47    <permission
+47-->[androidx.core:core:1.10.1] C:\Users\pratt\.gradle\caches\transforms-3\500754986cb9bc21e90d72f2f2fd28aa\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+48        android:name="com.pratyush.embelia.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+48-->[androidx.core:core:1.10.1] C:\Users\pratt\.gradle\caches\transforms-3\500754986cb9bc21e90d72f2f2fd28aa\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+49        android:protectionLevel="signature" />
+49-->[androidx.core:core:1.10.1] C:\Users\pratt\.gradle\caches\transforms-3\500754986cb9bc21e90d72f2f2fd28aa\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+50
+51    <uses-permission android:name="com.pratyush.embelia.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+51-->[androidx.core:core:1.10.1] C:\Users\pratt\.gradle\caches\transforms-3\500754986cb9bc21e90d72f2f2fd28aa\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+51-->[androidx.core:core:1.10.1] C:\Users\pratt\.gradle\caches\transforms-3\500754986cb9bc21e90d72f2f2fd28aa\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+52
+53    <application
+54        android:name="android.app.Application"
+55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+55-->[androidx.core:core:1.10.1] C:\Users\pratt\.gradle\caches\transforms-3\500754986cb9bc21e90d72f2f2fd28aa\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+56        android:debuggable="true"
+57        android:icon="@mipmap/ic_launcher"
+58        android:label="embelia" >
+59        <activity
+60            android:name="com.pratyush.embelia.MainActivity"
+61            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+62            android:exported="true"
+63            android:hardwareAccelerated="true"
+64            android:launchMode="singleTop"
+65            android:theme="@style/LaunchTheme"
+66            android:windowSoftInputMode="adjustResize" >
+67
+68            <!--
+69                 Specifies an Android theme to apply to this Activity as soon as
+70                 the Android process has started. This theme is visible to the user
+71                 while the Flutter UI initializes. After that, this theme continues
+72                 to determine the Window background behind the Flutter UI.
+73            -->
+74            <meta-data
+75                android:name="io.flutter.embedding.android.NormalTheme"
+76                android:resource="@style/NormalTheme" />
+77
+78            <intent-filter>
+79                <action android:name="android.intent.action.MAIN" />
+80
+81                <category android:name="android.intent.category.LAUNCHER" />
+82            </intent-filter>
+83        </activity>
+84        <!--
+85             Don't delete the meta-data below.
+86             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+87        -->
+88        <meta-data
+89            android:name="flutterEmbedding"
+90            android:value="2" />
+91
+92        <service
+92-->[:cloud_firestore] P:\MajorProject\embelia\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-12:19
+93            android:name="com.google.firebase.components.ComponentDiscoveryService"
+93-->[:cloud_firestore] P:\MajorProject\embelia\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:8:18-89
+94            android:directBootAware="true"
+94-->[com.google.firebase:firebase-common:20.3.3] C:\Users\pratt\.gradle\caches\transforms-3\31b9aa9f665a01e1aada3a5327be4ab5\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:34:13-43
+95            android:exported="false" >
+95-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:68:13-37
+96            <meta-data
+96-->[:cloud_firestore] P:\MajorProject\embelia\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
+97                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+97-->[:cloud_firestore] P:\MajorProject\embelia\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-134
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[:cloud_firestore] P:\MajorProject\embelia\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
+99            <meta-data
+99-->[:firebase_auth] P:\MajorProject\embelia\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
+100                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+100-->[:firebase_auth] P:\MajorProject\embelia\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-124
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[:firebase_auth] P:\MajorProject\embelia\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
+102            <meta-data
+102-->[:firebase_core] P:\MajorProject\embelia\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-11:85
+103                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+103-->[:firebase_core] P:\MajorProject\embelia\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:17-124
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[:firebase_core] P:\MajorProject\embelia\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:69:13-71:85
+106                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+106-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:70:17-109
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:71:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-firestore:24.8.1] C:\Users\pratt\.gradle\caches\transforms-3\1b13442a9b8d57ae62e1e2f28026208c\transformed\jetified-firebase-firestore-24.8.1\AndroidManifest.xml:17:13-19:85
+109                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+109-->[com.google.firebase:firebase-firestore:24.8.1] C:\Users\pratt\.gradle\caches\transforms-3\1b13442a9b8d57ae62e1e2f28026208c\transformed\jetified-firebase-firestore-24.8.1\AndroidManifest.xml:18:17-111
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-firestore:24.8.1] C:\Users\pratt\.gradle\caches\transforms-3\1b13442a9b8d57ae62e1e2f28026208c\transformed\jetified-firebase-firestore-24.8.1\AndroidManifest.xml:19:17-82
+111        </service>
+112
+113        <provider
+113-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-16:20
+114            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+114-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-82
+115            android:authorities="com.pratyush.embelia.flutter.image_provider"
+115-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-74
+116            android:exported="false"
+116-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-37
+117            android:grantUriPermissions="true" >
+117-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-47
+118            <meta-data
+118-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-15:75
+119                android:name="android.support.FILE_PROVIDER_PATHS"
+119-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:17-67
+120                android:resource="@xml/flutter_image_picker_file_paths" />
+120-->[:image_picker_android] P:\MajorProject\embelia\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:17-72
+121        </provider>
+122
+123        <receiver
+123-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-16:40
+124            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+124-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-91
+125            android:exported="false" />
+125-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
+126        <receiver
+126-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-19:40
+127            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+127-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-97
+128            android:exported="false" />
+128-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-37
+129        <receiver
+129-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-29:20
+130            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+130-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-101
+131            android:exported="false" >
+131-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-37
+132            <intent-filter>
+132-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-28:29
+133                <action android:name="android.intent.action.BOOT_COMPLETED" />
+133-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:24:17-79
+133-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:24:25-76
+134                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+134-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:25:17-84
+134-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:25:25-81
+135                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+135-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-82
+135-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:26:25-79
+136                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+136-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-82
+136-->[:flutter_local_notifications] P:\MajorProject\embelia\build\flutter_local_notifications\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-79
+137            </intent-filter>
+138        </receiver>
+139
 140        <activity
-140-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:47:9-64:20
-141            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-141-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:48:13-79
-142            android:excludeFromRecents="true"
-142-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:49:13-46
-143            android:exported="true"
-143-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:50:13-36
-144            android:launchMode="singleTask"
-144-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:51:13-44
-145            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-145-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:52:13-72
-146            <intent-filter>
-146-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:53:13-63:29
-147                <action android:name="android.intent.action.VIEW" />
-147-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:13-65
-147-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:21-62
-148
-149                <category android:name="android.intent.category.DEFAULT" />
-149-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:38:17-76
-149-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:38:27-73
-150                <category android:name="android.intent.category.BROWSABLE" />
-150-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:39:17-78
-150-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\pratt\.gradle\caches\transforms-3\99c4415c85c41d201ce35622f58fe74c\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:39:27-75
-151
-152                <data
-152-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:16:13-42
-153                    android:host="firebase.auth"
-154                    android:path="/"
-155                    android:scheme="recaptcha" />
-155-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:16:19-39
-156            </intent-filter>
-157        </activity>
-158        <activity
-158-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\3911405eeabcd43864e88eb9ac1932cc\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:23:9-27:75
-159            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-159-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\3911405eeabcd43864e88eb9ac1932cc\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:24:13-93
-160            android:excludeFromRecents="true"
-160-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\3911405eeabcd43864e88eb9ac1932cc\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:25:13-46
-161            android:exported="false"
-161-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\3911405eeabcd43864e88eb9ac1932cc\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:26:13-37
-162            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-162-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\3911405eeabcd43864e88eb9ac1932cc\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:27:13-72
-163        <!--
-164            Service handling Google Sign-In user revocation. For apps that do not integrate with
-165            Google Sign-In, this service will never be started.
-166        -->
-167        <service
-167-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\3911405eeabcd43864e88eb9ac1932cc\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:33:9-37:51
-168            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-168-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\3911405eeabcd43864e88eb9ac1932cc\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:34:13-89
-169            android:exported="true"
-169-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\3911405eeabcd43864e88eb9ac1932cc\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:35:13-36
-170            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-170-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\3911405eeabcd43864e88eb9ac1932cc\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:36:13-107
-171            android:visibleToInstantApps="true" />
-171-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\pratt\.gradle\caches\transforms-3\3911405eeabcd43864e88eb9ac1932cc\transformed\jetified-play-services-auth-20.5.0\AndroidManifest.xml:37:13-48
-172
-173        <provider
-173-->[com.google.firebase:firebase-common:20.3.2] C:\Users\pratt\.gradle\caches\transforms-3\868f34f8975a511b9562f40132c95247\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:25:9-30:39
-174            android:name="com.google.firebase.provider.FirebaseInitProvider"
-174-->[com.google.firebase:firebase-common:20.3.2] C:\Users\pratt\.gradle\caches\transforms-3\868f34f8975a511b9562f40132c95247\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:26:13-77
-175            android:authorities="com.pratyush.embelia.firebaseinitprovider"
-175-->[com.google.firebase:firebase-common:20.3.2] C:\Users\pratt\.gradle\caches\transforms-3\868f34f8975a511b9562f40132c95247\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:27:13-72
-176            android:directBootAware="true"
-176-->[com.google.firebase:firebase-common:20.3.2] C:\Users\pratt\.gradle\caches\transforms-3\868f34f8975a511b9562f40132c95247\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:28:13-43
-177            android:exported="false"
-177-->[com.google.firebase:firebase-common:20.3.2] C:\Users\pratt\.gradle\caches\transforms-3\868f34f8975a511b9562f40132c95247\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:29:13-37
-178            android:initOrder="100" />
-178-->[com.google.firebase:firebase-common:20.3.2] C:\Users\pratt\.gradle\caches\transforms-3\868f34f8975a511b9562f40132c95247\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:30:13-36
-179
+140-->[:url_launcher_android] P:\MajorProject\embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-11:74
+141            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+141-->[:url_launcher_android] P:\MajorProject\embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-74
+142            android:exported="false"
+142-->[:url_launcher_android] P:\MajorProject\embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-37
+143            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+143-->[:url_launcher_android] P:\MajorProject\embelia\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-71
+144        <activity
+144-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:29:9-46:20
+145            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+145-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:30:13-80
+146            android:excludeFromRecents="true"
+146-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:31:13-46
+147            android:exported="true"
+147-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:32:13-36
+148            android:launchMode="singleTask"
+148-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:33:13-44
+149            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+149-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:34:13-72
+150            <intent-filter>
+150-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:35:13-45:29
+151                <action android:name="android.intent.action.VIEW" />
+151-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:14:13-65
+151-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:14:21-62
+152
+153                <category android:name="android.intent.category.DEFAULT" />
+153-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:17-76
+153-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:27-73
+154                <category android:name="android.intent.category.BROWSABLE" />
+154-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:17-78
+154-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:27-75
+155
+156                <data
+156-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:13-42
+157                    android:host="firebase.auth"
+158                    android:path="/"
+159                    android:scheme="genericidp" />
+159-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:19-39
+160            </intent-filter>
+161        </activity>
+162        <activity
+162-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:47:9-64:20
+163            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+163-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:48:13-79
+164            android:excludeFromRecents="true"
+164-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:49:13-46
+165            android:exported="true"
+165-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:50:13-36
+166            android:launchMode="singleTask"
+166-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:51:13-44
+167            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+167-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:52:13-72
+168            <intent-filter>
+168-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:53:13-63:29
+169                <action android:name="android.intent.action.VIEW" />
+169-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:14:13-65
+169-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:14:21-62
+170
+171                <category android:name="android.intent.category.DEFAULT" />
+171-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:17-76
+171-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:38:27-73
+172                <category android:name="android.intent.category.BROWSABLE" />
+172-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:17-78
+172-->[com.google.firebase:firebase-auth:22.1.2] C:\Users\pratt\.gradle\caches\transforms-3\cc3b462e64a8beb7d2ebd475c4982cbc\transformed\jetified-firebase-auth-22.1.2\AndroidManifest.xml:39:27-75
+173
+174                <data
+174-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:13-42
+175                    android:host="firebase.auth"
+176                    android:path="/"
+177                    android:scheme="recaptcha" />
+177-->P:\MajorProject\embelia\android\app\src\main\AndroidManifest.xml:15:19-39
+178            </intent-filter>
+179        </activity>
 180        <activity
-180-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\27ed75583d8888cfd149af38bb71ea35\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-181            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-181-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\27ed75583d8888cfd149af38bb71ea35\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-182            android:exported="false"
-182-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\27ed75583d8888cfd149af38bb71ea35\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-183            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-183-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\27ed75583d8888cfd149af38bb71ea35\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-184
-185        <meta-data
-185-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\pratt\.gradle\caches\transforms-3\f39faed18ed24c5eda489febb99f4594\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:21:9-23:69
-186            android:name="com.google.android.gms.version"
-186-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\pratt\.gradle\caches\transforms-3\f39faed18ed24c5eda489febb99f4594\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:22:13-58
-187            android:value="@integer/google_play_services_version" />
-187-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\pratt\.gradle\caches\transforms-3\f39faed18ed24c5eda489febb99f4594\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:23:13-66
-188
-189        <uses-library
-189-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\36a45b2abb854eca36c578fbec6ed4df\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-190            android:name="androidx.window.extensions"
-190-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\36a45b2abb854eca36c578fbec6ed4df\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-191            android:required="false" />
-191-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\36a45b2abb854eca36c578fbec6ed4df\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-192        <uses-library
-192-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\36a45b2abb854eca36c578fbec6ed4df\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-193            android:name="androidx.window.sidecar"
-193-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\36a45b2abb854eca36c578fbec6ed4df\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-194            android:required="false" />
-194-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\36a45b2abb854eca36c578fbec6ed4df\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-195    </application>
-196
-197</manifest>
+180-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\pratt\.gradle\caches\transforms-3\7c49b0218a6d5063c7b9b53a6f38e833\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:23:9-27:75
+181            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+181-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\pratt\.gradle\caches\transforms-3\7c49b0218a6d5063c7b9b53a6f38e833\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:24:13-93
+182            android:excludeFromRecents="true"
+182-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\pratt\.gradle\caches\transforms-3\7c49b0218a6d5063c7b9b53a6f38e833\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:25:13-46
+183            android:exported="false"
+183-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\pratt\.gradle\caches\transforms-3\7c49b0218a6d5063c7b9b53a6f38e833\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:26:13-37
+184            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+184-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\pratt\.gradle\caches\transforms-3\7c49b0218a6d5063c7b9b53a6f38e833\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:27:13-72
+185        <!--
+186            Service handling Google Sign-In user revocation. For apps that do not integrate with
+187            Google Sign-In, this service will never be started.
+188        -->
+189        <service
+189-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\pratt\.gradle\caches\transforms-3\7c49b0218a6d5063c7b9b53a6f38e833\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:33:9-37:51
+190            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+190-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\pratt\.gradle\caches\transforms-3\7c49b0218a6d5063c7b9b53a6f38e833\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:34:13-89
+191            android:exported="true"
+191-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\pratt\.gradle\caches\transforms-3\7c49b0218a6d5063c7b9b53a6f38e833\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:35:13-36
+192            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+192-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\pratt\.gradle\caches\transforms-3\7c49b0218a6d5063c7b9b53a6f38e833\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:36:13-107
+193            android:visibleToInstantApps="true" />
+193-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\pratt\.gradle\caches\transforms-3\7c49b0218a6d5063c7b9b53a6f38e833\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:37:13-48
+194
+195        <provider
+195-->[com.google.firebase:firebase-common:20.3.3] C:\Users\pratt\.gradle\caches\transforms-3\31b9aa9f665a01e1aada3a5327be4ab5\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:25:9-30:39
+196            android:name="com.google.firebase.provider.FirebaseInitProvider"
+196-->[com.google.firebase:firebase-common:20.3.3] C:\Users\pratt\.gradle\caches\transforms-3\31b9aa9f665a01e1aada3a5327be4ab5\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:26:13-77
+197            android:authorities="com.pratyush.embelia.firebaseinitprovider"
+197-->[com.google.firebase:firebase-common:20.3.3] C:\Users\pratt\.gradle\caches\transforms-3\31b9aa9f665a01e1aada3a5327be4ab5\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:27:13-72
+198            android:directBootAware="true"
+198-->[com.google.firebase:firebase-common:20.3.3] C:\Users\pratt\.gradle\caches\transforms-3\31b9aa9f665a01e1aada3a5327be4ab5\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:28:13-43
+199            android:exported="false"
+199-->[com.google.firebase:firebase-common:20.3.3] C:\Users\pratt\.gradle\caches\transforms-3\31b9aa9f665a01e1aada3a5327be4ab5\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:29:13-37
+200            android:initOrder="100" />
+200-->[com.google.firebase:firebase-common:20.3.3] C:\Users\pratt\.gradle\caches\transforms-3\31b9aa9f665a01e1aada3a5327be4ab5\transformed\jetified-firebase-common-20.3.3\AndroidManifest.xml:30:13-36
+201
+202        <activity
+202-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\8d7ae9bfe3375687cc54aa9b4916e8a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+203            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+203-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\8d7ae9bfe3375687cc54aa9b4916e8a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+204            android:exported="false"
+204-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\8d7ae9bfe3375687cc54aa9b4916e8a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+205            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+205-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\pratt\.gradle\caches\transforms-3\8d7ae9bfe3375687cc54aa9b4916e8a2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+206
+207        <meta-data
+207-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\pratt\.gradle\caches\transforms-3\39df5f136a57c9ade22f6e89ac53ab11\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:21:9-23:69
+208            android:name="com.google.android.gms.version"
+208-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\pratt\.gradle\caches\transforms-3\39df5f136a57c9ade22f6e89ac53ab11\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:22:13-58
+209            android:value="@integer/google_play_services_version" />
+209-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\pratt\.gradle\caches\transforms-3\39df5f136a57c9ade22f6e89ac53ab11\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:23:13-66
+210
+211        <uses-library
+211-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\1ebd745a10ebbdefcbea5d077230682b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+212            android:name="androidx.window.extensions"
+212-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\1ebd745a10ebbdefcbea5d077230682b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+213            android:required="false" />
+213-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\1ebd745a10ebbdefcbea5d077230682b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+214        <uses-library
+214-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\1ebd745a10ebbdefcbea5d077230682b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+215            android:name="androidx.window.sidecar"
+215-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\1ebd745a10ebbdefcbea5d077230682b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+216            android:required="false" />
+216-->[androidx.window:window:1.0.0-beta04] C:\Users\pratt\.gradle\caches\transforms-3\1ebd745a10ebbdefcbea5d077230682b\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+217
+218        <provider
+218-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+219            android:name="androidx.startup.InitializationProvider"
+219-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:25:13-67
+220            android:authorities="com.pratyush.embelia.androidx-startup"
+220-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:26:13-68
+221            android:exported="false" >
+221-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:27:13-37
+222            <meta-data
+222-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+223                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+223-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+224                android:value="androidx.startup" />
+224-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+225        </provider>
+226
+227        <receiver
+227-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+228            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+228-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+229            android:directBootAware="false"
+229-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+230            android:enabled="true"
+230-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+231            android:exported="true"
+231-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+232            android:permission="android.permission.DUMP" >
+232-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+233            <intent-filter>
+233-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+234                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+234-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+234-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+235            </intent-filter>
+236            <intent-filter>
+236-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+237                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+237-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+237-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+238            </intent-filter>
+239            <intent-filter>
+239-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+240                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+240-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+240-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+241            </intent-filter>
+242            <intent-filter>
+242-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+243                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+243-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+243-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\pratt\.gradle\caches\transforms-3\f4e513ba3737015f2d5c2bb9ec48f2bb\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+244            </intent-filter>
+245        </receiver>
+246    </application>
+247
+248</manifest>

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "840856747821",
+    "firebase_url": "https://embelia-367713-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "embelia-367713",
     "storage_bucket": "embelia-367713.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "840856747821-68uj148d21kgdrbpbc82mhmcgp24pivh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pratyush.embelia",
+            "certificate_hash": "a61a1683026f7fda2798c482214f395d4f22b74e"
+          }
+        },
         {
           "client_id": "840856747821-8k6cke1cmg7nhlt0hmu97tim5lor0f3s.apps.googleusercontent.com",
           "client_type": 3
@@ -29,6 +38,13 @@
             {
               "client_id": "840856747821-3875jtrl34b52h37bo847mr0r5tmu96q.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "840856747821-bmd8a79hv3r3ikaqniv55id3e7ct2ouo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pratyush.embelia"
+              }
             }
           ]
         }

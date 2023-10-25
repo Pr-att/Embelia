@@ -384,6 +384,8 @@ color bright_foreground_material_dark
 color bright_foreground_material_light
 color button_material_dark
 color button_material_light
+color call_notification_answer_color
+color call_notification_decline_color
 color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
@@ -395,7 +397,6 @@ color foreground_material_light
 color grey_text
 color highlighted_text_material_dark
 color highlighted_text_material_light
-color hint_color
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -424,7 +425,6 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
-color success_color
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -433,7 +433,6 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
-color warning_color
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -512,7 +511,6 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
-dimen body_text_size
 dimen compat_button_inset_horizontal_material
 dimen compat_button_inset_vertical_material
 dimen compat_button_padding_horizontal_material
@@ -651,12 +649,12 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable fingerprint_dialog_error
 drawable fingerprint_dialog_fp_icon
-drawable fingerprint_initial_icon
-drawable fingerprint_success_icon
-drawable fingerprint_warning_icon
-drawable ic_done_white_24dp
-drawable ic_fingerprint_white_24dp
-drawable ic_priority_high_white_24dp
+drawable ic_call_answer
+drawable ic_call_answer_low
+drawable ic_call_answer_video
+drawable ic_call_answer_video_low
+drawable ic_call_decline
+drawable ic_call_decline_low
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -746,8 +744,6 @@ id fingerprint_description
 id fingerprint_error
 id fingerprint_icon
 id fingerprint_required
-id fingerprint_signin
-id fingerprint_status
 id fingerprint_subtitle
 id forever
 id fragment_container_view_tag
@@ -886,7 +882,6 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout scan_fp
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -918,6 +913,13 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string call_notification_answer_action
+string call_notification_answer_video_action
+string call_notification_decline_action
+string call_notification_hang_up_action
+string call_notification_incoming_text
+string call_notification_ongoing_text
+string call_notification_screening_text
 string confirm_device_credential_password
 string default_error_msg
 string fingerprint_dialog_touch_sensor
