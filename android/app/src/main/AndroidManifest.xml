@@ -20,7 +20,7 @@
         </intent>
     </queries>
     <application
-        android:label="embelia"
+        android:label="Embelia"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

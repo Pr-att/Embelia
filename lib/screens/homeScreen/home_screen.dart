@@ -2,8 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:embelia/authentication/cubit/user_data_firebase_cubit.dart';
 import 'package:embelia/constants.dart';
 import 'package:embelia/routes/router.dart';
+import 'package:embelia/screens/homeScreen/auth_cubit.dart';
 import 'package:embelia/screens/homeScreen/home_screen_cubit.dart';
 import 'package:embelia/server/mongoDB.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -12,7 +14,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 import '../../authentication/user_auth.dart';
-import '../../localStorage/local_storage.dart';
 import '../../server/user_task_model.dart';
 import '../../utils/notification_service.dart';
 
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    // notificationServices.initialiseNotification();
+    notificationServices.initialiseNotification();
     BlocProvider.of<UserDataFirebaseCubit>(context).init(context).then(
           (value) => BlocProvider.of<UserDataFirebaseCubit>(context)
               .doesUserHealthProfileExist(context)
@@ -54,46 +55,237 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            ElevatedButton(
-              onPressed: () {
-                GoRouter.of(context).goNamed(MyAppRouteConstants.kFAQ);
-              },
-              child: const Text("FAQ"),
+            const SizedBox(
+              height: 50,
             ),
-            IconButton(
-              onPressed: () async {
-                UserAuth().signOutFromGoogle().then(
-                  (value) async {
-                    await LocalStorage.clear().then((value) =>
-                        GoRouter.of(context)
-                            .goNamed(MyAppRouteConstants.initialScreen));
-                  },
-                );
-              },
-              icon: const Icon(
-                Icons.logout,
-                color: Colors.black,
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  // color: MyColor.lightGreyShade,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: MaterialBanner(
+                    dividerColor: Colors.green,
+                    surfaceTintColor: Colors.green.shade100,
+                    contentTextStyle: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Ubuntu',
+                      color: Colors.black,
+                    ),
+                    backgroundColor: Colors.green.shade100,
+                    leading: const Icon(
+                      Icons.verified,
+                      color: Colors.green,
+                    ),
+                    content: const Text(
+                      'Your account is verified!',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Ubuntu',
+                      ),
+                    ),
+                    actions: [
+                      IconButton(
+                        onPressed: () {
+                          showAdaptiveDialog(
+                            context: context,
+                            builder: (_) {
+                              return AlertDialog(
+                                title: const Text(
+                                  'Account Verification',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'Ubuntu'),
+                                ),
+                                content: const Text(
+                                  'Your account is verified!',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'Ubuntu',
+                                      color: Colors.green,
+                                      fontSize: 15),
+                                ),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: const Text('OK'),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        icon: const Icon(
+                          Icons.info,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
-            const Text("Notification Settings"),
+            Divider(
+              thickness: 2,
+              endIndent: 20,
+              indent: 20,
+              color: Colors.black.withOpacity(0.5),
+            ),
+            const Spacer(),
+            const SizedBox(
+              height: 10,
+            ),
+            Divider(
+              thickness: 2,
+              endIndent: 20,
+              indent: 20,
+              color: Colors.black.withOpacity(0.5),
+            ),
+            Text(
+              'Water Reminder?',
+              style: GoogleFonts.ubuntu(
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             ToggleButtons(
-              selectedColor: Colors.red,
+              onPressed: (int index) async {
+                if (index == 0) {
+                  await notificationServices.scheduleNotification(
+                      'Reminder', 'Please have a glass of water');
+                } else {
+                  await notificationServices.cancelNotification();
+                }
+                setState(() {});
+              },
+              borderRadius: BorderRadius.circular(10),
+              textStyle: const TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+              borderColor: Colors.grey,
+              fillColor: Colors.grey.shade200,
+              selectedColor: Colors.green,
+              disabledColor: Colors.grey,
+              color: Colors.black,
               isSelected: const [true, false],
+              children: const [
+                Icon(Icons.alarm_on_sharp),
+                Icon(Icons.alarm_off_sharp),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Divider(
+              thickness: 2,
+              endIndent: 20,
+              indent: 20,
+              color: Colors.black.withOpacity(0.5),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
               children: [
-                IconButton(
-                  onPressed: () {
-                    notificationServices.scheduleNotification(
-                        'Reminder', 'Please have a glass of water');
-                  },
-                  icon: const Icon(Icons.alarm_on_sharp),
+                const Spacer(),
+                Text(
+                  'Logged in as',
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.ubuntu(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                  ),
                 ),
-                IconButton(
-                  onPressed: () {
-                    notificationServices.cancelNotification();
+                const SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  UserAuth.userName.toString().toTitleCase(),
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.ubuntu(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    color: Colors.blue,
+                  ),
+                ),
+                const Spacer(),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Divider(
+              thickness: 2,
+              endIndent: 20,
+              indent: 20,
+              color: Colors.black.withOpacity(0.5),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Align(
+                  alignment: Alignment.center,
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      color: MyColor.lightGreyShade,
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                  ),
+                ),
+                BlocBuilder<AuthCubit, AuthState>(
+                  builder: (context, state) {
+                    if (state is AuthInitial) {
+                      return IconButton(
+                        onPressed: () async {
+                          BlocProvider.of<AuthCubit>(context).signOut(context);
+                        },
+                        icon: const Icon(
+                          CupertinoIcons.square_arrow_left,
+                          color: Colors.black,
+                          size: 25,
+                        ),
+                      );
+                    } else if (state is AuthLoading) {
+                      return const Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    } else {
+                      return IconButton(
+                        onPressed: () async {},
+                        icon: const Icon(
+                          CupertinoIcons.square_arrow_left,
+                          color: Colors.black,
+                          size: 25,
+                        ),
+                      );
+                    }
                   },
-                  icon: const Icon(Icons.alarm_off_sharp),
                 ),
               ],
+            ),
+            Text(
+              'Sign Out',
+              style: GoogleFonts.ubuntu(
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
           ],
         ),

@@ -7,14 +7,14 @@ class NotificationServices {
   final AndroidInitializationSettings _androidInitializationSettings =
       const AndroidInitializationSettings('background');
 
-  void initialiseNotification() async {
+  Future initialiseNotification() async {
     InitializationSettings initializationSettings =
         InitializationSettings(android: _androidInitializationSettings);
 
     await _flutterLocalNotificationsPlugin.initialize(initializationSettings);
   }
 
-  void sendNotification(String title, String body) async {
+  Future sendNotification(String title, String body) async {
     NotificationDetails notificationDetails = const NotificationDetails(
         android: AndroidNotificationDetails("channelId", "channelName",
             importance: Importance.max,
@@ -25,7 +25,7 @@ class NotificationServices {
         0, title, body, notificationDetails);
   }
 
-  void scheduleNotification(String title, String body) async {
+  Future scheduleNotification(String title, String body) async {
     NotificationDetails notificationDetails = const NotificationDetails(
         android: AndroidNotificationDetails("channelId", "channelName",
             importance: Importance.max,
@@ -36,7 +36,7 @@ class NotificationServices {
         0, title, body, RepeatInterval.hourly, notificationDetails);
   }
 
-  void cancelNotification() async {
+  Future cancelNotification() async {
     await _flutterLocalNotificationsPlugin.cancelAll();
   }
 

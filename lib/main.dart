@@ -1,6 +1,8 @@
 import 'package:embelia/localStorage/local_storage.dart';
 import 'package:embelia/routes/router.dart';
+import 'package:embelia/screens/InitialScreen/auth_init_cubit.dart';
 import 'package:embelia/screens/faq/faq_provider_cubit.dart';
+import 'package:embelia/screens/homeScreen/auth_cubit.dart';
 import 'package:embelia/screens/homeScreen/home_screen_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +37,12 @@ void main() async {
           ),
           BlocProvider(
             create: (_) => HomeScreenCubit(),
+          ),
+          BlocProvider(
+            create: (_) => AuthCubit(),
+          ),
+          BlocProvider(
+            create: (_) => AuthInitCubit(),
           ),
         ],
         child: const MyApp(),
