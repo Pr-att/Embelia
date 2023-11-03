@@ -11,12 +11,6 @@ part 'auth_state.dart';
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(AuthInitial());
 
-  Future checkLogin() async {
-    emit(AuthLoading());
-    await Future.delayed(const Duration(seconds: 2));
-    emit(AuthSignOut());
-  }
-
   Future signOut(BuildContext context) async {
     emit(AuthLoading());
     UserAuth().signOutFromGoogle().then(

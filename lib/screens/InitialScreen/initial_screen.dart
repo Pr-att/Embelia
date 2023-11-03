@@ -1,10 +1,12 @@
 import 'dart:ui';
+
 import 'package:embelia/buttons/elevated_button/text_input.dart';
 import 'package:embelia/localStorage/local_storage.dart';
 import 'package:embelia/routes/router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../../authentication/user_auth.dart';
 
 class InitialScreen extends StatefulWidget {
@@ -111,10 +113,10 @@ class _InitialScreenState extends State<InitialScreen> {
                           UserAuth.signInWithGoogle().then(
                             (value) async {
                               await LocalStorage.setString(
-                                      'email', UserAuth.userEmail)
+                                      'email', UserAuth().userEmail)
                                   .then(
                                 (value) => LocalStorage.setString(
-                                        'name', UserAuth.userName)
+                                        'name', UserAuth().userName)
                                     .then(
                                   (value) {
                                     Navigator.pop(context);

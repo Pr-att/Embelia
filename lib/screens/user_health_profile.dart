@@ -4,10 +4,12 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:embelia/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:http/http.dart' as http;
 import 'package:lottie/lottie.dart';
 
 import '../authentication/user_auth.dart';
+import '../routes/router.dart';
 
 class UserHealthProfile extends StatefulWidget {
   const UserHealthProfile({super.key});
@@ -434,7 +436,7 @@ class _HealthProfileCardState extends State<HealthProfileCard> {
 
   Future<void> getData() async {
     final data = FirebaseFirestore.instance.collection('users');
-    var myData = await data.doc(UserAuth.userEmail).get();
+    var myData = await data.doc(UserAuth().userEmail).get();
     Map<String, dynamic> userData = {};
     userData = myData.data() as Map<String, dynamic>;
 
@@ -510,7 +512,7 @@ class _HealthProfileCardState extends State<HealthProfileCard> {
                           // Add data to firebase
                           final data =
                               FirebaseFirestore.instance.collection('users');
-                          await data.doc(UserAuth.userEmail).set({
+                          await data.doc(UserAuth().userEmail).set({
                             widget.questionID: widget.options![index],
                           }, SetOptions(merge: true));
 
@@ -521,33 +523,21 @@ class _HealthProfileCardState extends State<HealthProfileCard> {
                                 duration: const Duration(milliseconds: 500),
                                 curve: Curves.easeOutCubic);
                           } else {
-                            // Navigate to next page
-                            // await data.doc(UserAuth.userEmail).set({
-                            //   'healthProfileCreated': true,
-                            // }, SetOptions(merge: true)).then(
-                            //   (value) async {
-                            //     await getData().then(
-                            //       (value) async {
-                            //         await predictCustomHealthScore(userData)
-                            //             .then(
-                            //           (value) async {
-                            //             print(value);
-                            //           },
-                            //         );
-                            //       },
-                            //     );
-                            //   },
-                            // );
-                            await getData().then(
-                              (value) async {
-                                await predictCustomHealthScore(myFinalData)
-                                    .then(
-                                  (value) async {
-                                    debugPrint(value.toString());
-                                  },
-                                );
-                              },
-                            );
+                            await getData().then((value) async {
+                              await predictCustomHealthScore(myFinalData).then(
+                                (value) async {
+                                  await FirebaseFirestore.instance
+                                      .collection('users')
+                                      .doc(UserAuth().userEmail)
+                                      .set({
+                                    'healthScore': value.toInt(),
+                                    'healthProfileCreated': true,
+                                  }, SetOptions(merge: true)).then((value) =>
+                                          GoRouter.of(context).goNamed(
+                                              MyAppRouteConstants.homeScreen));
+                                },
+                              );
+                            });
                           }
                         },
                       ),
@@ -609,7 +599,7 @@ class _HealthProfileCardState extends State<HealthProfileCard> {
                           // Add data to firebase
                           final data =
                               FirebaseFirestore.instance.collection('users');
-                          data.doc(UserAuth.userEmail).set({
+                          data.doc(UserAuth().userEmail).set({
                             widget.questionID: _controller.text,
                           }, SetOptions(merge: true));
 
@@ -674,138 +664,18 @@ class _HealthProfileCardState extends State<HealthProfileCard> {
   Future<double> predictCustomHealthScore(Map<String, dynamic> data) async {
     final response = await http.post(
       Uri.parse(
-          'https://1eb9-2405-201-6834-3862-7c47-94d7-43f6-f662.ngrok.io/predict_custom_health_score'),
+          "http://ec2-51-20-98-72.eu-north-1.compute.amazonaws.com:8080/predict_custom_health_score"),
       headers: <String, String>{
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json; charset=UTF-8',
       },
       body: jsonEncode(data),
     );
 
     if (response.statusCode == 200) {
       Map<String, dynamic> result = json.decode(response.body);
-      return result['custom_health_score'];
+      return result['healthScore'];
     } else {
       throw Exception('Failed to predict custom health score');
     }
   }
-
-  //   // Sample data (make sure it matches the structure and feature names of your original data)
-
-  //   // Normalize numeric features using Min-Max scaling
-  //   userData['Age'] = (userData['Age'] - 18) / (80 - 18);
-  //   userData['Height'] = (userData['Height'] - 140) / (200 - 140);
-  //   userData['Weight'] = (userData['Weight'] - 40) / (150 - 40);
-  //   userData['BMI'] = (userData['BMI'] - 15) / (40 - 15);
-  //   userData['Avg. Hours of Sleep'] =
-  //       (userData['Avg. Hours of Sleep'] - 4) / (12 - 4);
-  //   userData['Physical Activity Hours'] =
-  //       (userData['Physical Activity Hours'] - 0) / (5 - 0);
-  //   userData['Screen Time'] = (userData['Screen Time'] - 1) / (10 - 1);
-  //
-  //   // Categorize categorical features using one-hot encoding
-  //   userData['Gender_Male'] = 1;
-  //   userData['Gender_Female'] = 0;
-  //   userData['Medical Conditions_No'] = 1;
-  //   userData['Medical Conditions_Yes'] = 0;
-  //   userData['Allergies_No'] = 1;
-  //   userData['Allergies_Yes'] = 0;
-  //   userData['Diet_Balanced'] = 0;
-  //   userData['Diet_Vegetarian'] = 0;
-  //   userData['Diet_Vegan'] = 0;
-  //   userData['Diet_Non Vegetarian'] = 0;
-  //   userData['Diet_Paleo'] = 0;
-  //   userData['Diet_Keto'] = 0;
-  //   userData['Exercise Routine_Regular'] = 0;
-  //   userData['Exercise Routine_Irregular'] = 0;
-  //   userData['Exercise Routine_Sedentary'] = 0;
-  //   userData['Exercise Routine_Athletic'] = 0;
-  //   userData['Smoking Habits_Non-Smoker'] = 0;
-  //   userData['Smoking Habits_Smoker'] = 0;
-  //   userData['Smoking Habits_Occasional'] = 0;
-  //   userData['Smoking Habits_Former Smoker'] = 0;
-  //   userData['Alcohol Consumption_Low'] = 0;
-  //   userData['Alcohol Consumption_Moderate'] = 0;
-  //   userData['Alcohol Consumption_High'] = 0;
-  //   userData['Alcohol Consumption_Non-Drinker'] = 0;
-  //   userData['Recreational Drug Use_No'] = 0;
-  //   userData['Recreational Drug Use_Yes'] = 0;
-  //   userData['Recreational Drug Use_Recreational'] = 0;
-  //   userData['Stress Management_Poor'] = 0;
-  //   userData['Stress Management_Good'] = 0;
-  //   userData['Stress Management_Moderate'] = 0;
-  //   userData['Stress Management_Excellent'] = 0;
-  //   userData['Mental Health History_Stable'] = 0;
-  //   userData['Mental Health History_History'] = 0;
-  //   userData['Mental Health History_Depression'] = 0;
-  //   userData['Mental Health History_Anxiety'] = 0;
-  //   userData['Family History_No'] = 0;
-  //   userData['Family History_Yes'] = 0;
-  //   userData['Family History_Genetic Conditions'] = 0;
-  //   userData['Sleep Schedule_Regular'] = 0;
-  //   userData['Sleep Schedule_Irregular'] = 0;
-  //   userData['Sleep Schedule_Night Owl'] = 0;
-  //   userData['Sleep Schedule_Early Bird'] = 0;
-  //   userData['Occupation_Office Job'] = 0;
-  //   userData['Occupation_Manual Labor'] = 0;
-  //   userData['Occupation_Student'] = 0;
-  //   userData['Occupation_Other'] = 0;
-  //   userData['Occupation_Healthcare Professional'] = 0;
-  //   userData['Occupation_Freelancer'] = 0;
-  //
-  //   // Assign values to categorical features
-  //
-  //   // Weights for each feature
-  //   Map<String, dynamic> weights = {
-  //     'Age': -0.1,
-  //     'BMI': -0.1,
-  //     'Avg. Hours of Sleep': 0.2,
-  //     'Physical Activity Hours': 0.2,
-  //     'Medical Conditions': -0.2,
-  //     'Allergies': -0.05,
-  //     'Screen Time': -0.1,
-  //     'Diet_Keto': 0,
-  //     'Diet_Non Vegetarian': 0,
-  //     'Diet_Paleo': 0,
-  //     'Diet_Vegan': 0.05,
-  //     'Diet_Vegetarian': 0.05,
-  //     'Exercise Routine_Irregular': -0.05,
-  //     'Exercise Routine_Regular': 0.2,
-  //     'Exercise Routine_Sedentary': -0.2,
-  //     'Smoking Habits_Smoker': -0.2,
-  //     'Smoking Habits_Non-Smoker': 0.1,
-  //     'Alcohol Consumption_Low': 0.05,
-  //     'Alcohol Consumption_Moderate': 0,
-  //     'Alcohol Consumption_Non-Drinker': 0.05,
-  //     'Recreational Drug Use_Recreational': -0.1,
-  //     'Recreational Drug Use_Yes': -0.2,
-  //     'Stress Management_Good': 0.2,
-  //     'Stress Management_Moderate': 0,
-  //     'Stress Management_Poor': -0.2,
-  //     'Mental Health History_Depression': -0.2,
-  //     'Mental Health History_History': -0.1,
-  //     'Mental Health History_Stable': 0.1,
-  //     'Family History_No': 0.05,
-  //     'Family History_Yes': -0.05,
-  //     'Sleep Schedule_Irregular': -0.1,
-  //     'Sleep Schedule_Night Owl': -0.05,
-  //     'Sleep Schedule_Regular': 0.1,
-  //     'Occupation_Healthcare Professional': -0.1,
-  //     'Occupation_Manual Labor': -0.05,
-  //     'Occupation_Office Job': 0,
-  //     'Occupation_Other': 0,
-  //     'Occupation_Student': -0.05,
-  //   };
-  //
-  //   // Calculate the custom health score based on the weighted factors
-  //   double customHealthScore = 0.0;
-  //
-  //   for (String feature in weights.keys) {
-  //     customHealthScore += userData[feature] * weights[feature];
-  //   }
-  //
-  //   // Normalize the custom health score to a 0-100 range
-  //   customHealthScore = (customHealthScore - 0) / (100 - 0) * 100;
-  //
-  //   // The 'customHealthScore' now contains the calculated health score for your sample data
-  // }
 }

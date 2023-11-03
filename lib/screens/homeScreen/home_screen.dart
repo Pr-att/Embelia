@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:embelia/authentication/cubit/user_data_firebase_cubit.dart';
 import 'package:embelia/constants.dart';
@@ -44,6 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
         );
+    UserAuth().getUserName();
     super.initState();
   }
 
@@ -209,7 +212,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 5,
                 ),
                 Text(
-                  UserAuth.userName.toString().toTitleCase(),
+                  UserAuth().userName.toString().toTitleCase(),
                   overflow: TextOverflow.ellipsis,
                   style: GoogleFonts.ubuntu(
                     fontWeight: FontWeight.bold,
@@ -415,14 +418,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     builder: (context, state) {
                       if (state is UserDataFirebaseLoaded) {
                         return Text(
-                          "Hey ${UserAuth.userName.toString().toTitleCase()}",
+                          "Hey ${UserAuth().userName.toString().toTitleCase()}",
                           style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Ubuntu'),
                         );
                       } else if (state is UserDataFirebaseLoading) {
-                        return const Center(child: CircularProgressIndicator());
+                        return Center(
+                            child: CircularProgressIndicator(
+                          color: Color.fromRGBO(
+                              Random().nextInt(255),
+                              Random().nextInt(255),
+                              Random().nextInt(255),
+                              0.8),
+                        ));
                       } else {
                         return const Text('Hey User');
                       }
@@ -591,7 +601,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               return StreamBuilder<QuerySnapshot>(
                                 stream: FirebaseFirestore.instance
                                     .collection('users')
-                                    .doc(UserAuth.userEmail)
+                                    .doc(UserAuth().userEmail)
                                     .collection('totalTask')
                                     .snapshots(),
                                 builder: (BuildContext context,
@@ -788,8 +798,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                                 // Create Task Data
                                                 final taskData = DataSchema(
-                                                  name: UserAuth.userName!,
-                                                  email: UserAuth.userEmail,
+                                                  name: UserAuth().userName!,
+                                                  email: UserAuth().userEmail,
                                                   taskName: data['taskName']
                                                       .toString(),
                                                   taskStartTime: DateTime.now()
@@ -809,7 +819,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 // Add to MongoDB
                                                 MongoDB.insertOne(
                                                     taskData.toMap(),
-                                                    UserAuth.userEmail);
+                                                    UserAuth().userEmail);
                                               },
                                               icon: SvgPicture.asset(
                                                 'assets/images/add.svg',
@@ -938,8 +948,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
                       // Create Task Data
                       final taskData = DataSchema(
-                        name: UserAuth.userName!,
-                        email: UserAuth.userEmail,
+                        name: UserAuth().userName!,
+                        email: UserAuth().userEmail,
                         taskName: _taskNameController.text,
                         taskStartTime: DateTime.now().millisecondsSinceEpoch,
                         taskTotalTime: double.parse(_taskTimeController.text),
@@ -950,7 +960,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           .addUserTaskData(context, taskData.toMap());
 
                       // Add to MongoDB
-                      MongoDB.insertOne(taskData.toMap(), UserAuth.userEmail);
+                      MongoDB.insertOne(taskData.toMap(), UserAuth().userEmail);
 
                       // Close Dialog
                       Navigator.pop(context);

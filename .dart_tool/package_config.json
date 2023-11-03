@@ -297,7 +297,7 @@
     },
     {
       "name": "flutter_svg",
-      "rootUri": "file:///C:/Users/pratt/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svg-2.0.8",
+      "rootUri": "file:///C:/Users/pratt/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_svg-2.0.9",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -483,7 +483,7 @@
     },
     {
       "name": "local_auth_ios",
-      "rootUri": "file:///C:/Users/pratt/AppData/Local/Pub/Cache/hosted/pub.dev/local_auth_ios-1.1.4",
+      "rootUri": "file:///C:/Users/pratt/AppData/Local/Pub/Cache/hosted/pub.dev/local_auth_ios-1.1.5",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -974,7 +974,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2023-10-31T21:01:58.108388Z",
+  "generated": "2023-11-03T17:57:57.014223Z",
   "generator": "pub",
   "generatorVersion": "3.1.5"
 }

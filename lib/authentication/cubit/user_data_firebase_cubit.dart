@@ -43,12 +43,12 @@ class UserDataFirebaseCubit extends Cubit<UserDataFirebaseState> {
   }
 
   Future<bool> doesUserExist(BuildContext context) async {
-    DocumentSnapshot snapshot = await data.doc(UserAuth.userEmail).get();
+    DocumentSnapshot snapshot = await data.doc(UserAuth().userEmail).get();
     return snapshot.exists;
   }
 
   Future<bool> doesUserHealthProfileExist(BuildContext context) async {
-    DocumentSnapshot snapshot = await data.doc(UserAuth.userEmail).get();
+    DocumentSnapshot snapshot = await data.doc(UserAuth().userEmail).get();
     return snapshot['healthProfileCreated'];
   }
 
@@ -98,21 +98,21 @@ class UserDataFirebaseCubit extends Cubit<UserDataFirebaseState> {
 
   Future createUserData(BuildContext context) async {
     final userData = UserDataSchema(
-      email: UserAuth.userEmail,
+      email: UserAuth().userEmail,
       healthScore: 0,
       streak: 0,
       prizeMoney: 0,
-      name: UserAuth.userName,
+      name: UserAuth().userName,
       totalTask: 0,
       healthProfileCreated: false,
     );
 
     final json = userData.toMap();
-    await data.doc(UserAuth.userEmail).set(json);
+    await data.doc(UserAuth().userEmail).set(json);
   }
 
   Future getUserData(BuildContext context) async {
-    DocumentSnapshot snapshot = await data.doc(UserAuth.userEmail).get();
+    DocumentSnapshot snapshot = await data.doc(UserAuth().userEmail).get();
     healthScore = snapshot['healthScore'];
     streak = snapshot['streak'];
     prizeMoney = snapshot['prizeMoney'];
@@ -155,7 +155,7 @@ class UserDataFirebaseCubit extends Cubit<UserDataFirebaseState> {
     currentTime = DateTime.now().millisecondsSinceEpoch;
     // get taskStartTime of the task to be deleted
     DocumentSnapshot snapshot = await data
-        .doc(UserAuth.userEmail)
+        .doc(UserAuth().userEmail)
         .collection('totalTask')
         .doc(taskName)
         .get();
@@ -174,13 +174,13 @@ class UserDataFirebaseCubit extends Cubit<UserDataFirebaseState> {
 
     // Delete Task Data from Firebase
     await data
-        .doc(UserAuth.userEmail)
+        .doc(UserAuth().userEmail)
         .collection('totalTask')
         .doc(taskName)
         .delete();
 
     // Update User Data in Firebase
-    await data.doc(UserAuth.userEmail).update({
+    await data.doc(UserAuth().userEmail).update({
       'totalTask': totalTask,
       'healthScore': healthScore,
       'streak': streak,

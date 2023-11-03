@@ -1,17 +1,28 @@
-import 'package:embelia/localStorage/local_storage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-class UserAuth {
+import '../localStorage/local_storage.dart';
+
+class UserAuth extends ChangeNotifier {
+  static GoogleSignInAccount? _user;
   final FirebaseAuth _auth = FirebaseAuth.instance;
   static String id = "UserAuth";
-  static GoogleSignInAccount? _user;
 
-  static dynamic get userEmail =>
-      _user?.email ?? LocalStorage.getString('email');
+  dynamic get userEmail => _user?.email ?? LocalStorage.getString('email');
 
-  static dynamic get userName =>
-      _user?.displayName ?? LocalStorage.getString('name');
+  Future<void> getUserName() async {
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(_user?.email ?? LocalStorage.getString('email'))
+        .get()
+        .then((value) async {
+      await LocalStorage.setString('name', value['name']);
+    });
+  }
+
+  dynamic get userName => _user?.email ?? LocalStorage.getString('name');
 
   set user(GoogleSignInAccount? user) {
     _user = user;

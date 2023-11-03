@@ -1,11 +1,8 @@
 import 'dart:convert';
-
 import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:meta/meta.dart';
-
 import '../../constants.dart';
-
 part 'faq_provider_state.dart';
 
 class FaqProviderCubit extends Cubit<FaqProviderState> {

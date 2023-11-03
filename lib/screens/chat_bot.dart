@@ -81,7 +81,7 @@ class _ChatBotState extends State<ChatBot> {
         backgroundColor: MyColor.primaryColor,
         title: BounceInDown(
           child: Text(
-            'Hello ${UserAuth.userName.toString().toTitleCase()}',
+            'Hello ${UserAuth().userName.toString().toTitleCase()}',
             style: const TextStyle(
                 fontFamily: 'OpenSans',
                 fontWeight: FontWeight.bold,
