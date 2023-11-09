@@ -86,47 +86,44 @@ class _UserHealthProfileState extends State<UserHealthProfile>
                         ),
                       ),
                       if (_isAnimating == true)
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.6,
-                          child: Expanded(
-                            flex: 3,
-                            child: AnimatedTextKit(
-                              totalRepeatCount: 1,
-                              animatedTexts: [
-                                RotateAnimatedText(
-                                  'HAPPY',
-                                  textStyle: const TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: 'Raleway',
-                                    color: Colors.black,
-                                  ),
+                        Expanded(
+                          flex: 3,
+                          child: AnimatedTextKit(
+                            totalRepeatCount: 1,
+                            animatedTexts: [
+                              RotateAnimatedText(
+                                'HAPPY',
+                                textStyle: const TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: 'Raleway',
+                                  color: Colors.black,
                                 ),
-                                RotateAnimatedText(
-                                  'HEALTHY',
-                                  textStyle: const TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: 'Raleway',
-                                    color: Colors.black,
-                                  ),
+                              ),
+                              RotateAnimatedText(
+                                'HEALTHY',
+                                textStyle: const TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: 'Raleway',
+                                  color: Colors.black,
                                 ),
-                                RotateAnimatedText(
-                                  'HOLISTIC',
-                                  textStyle: const TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: 'Raleway',
-                                    color: Colors.black,
-                                  ),
+                              ),
+                              RotateAnimatedText(
+                                'HOLISTIC',
+                                textStyle: const TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: 'Raleway',
+                                  color: Colors.black,
                                 ),
-                              ],
-                              onFinished: () {
-                                setState(() {
-                                  _isAnimating = false;
-                                });
-                              },
-                            ),
+                              ),
+                            ],
+                            onFinished: () {
+                              setState(() {
+                                _isAnimating = false;
+                              });
+                            },
                           ),
                         )
                       else

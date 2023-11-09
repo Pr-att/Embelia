@@ -983,11 +983,17 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 Color _progressColor(int value) {
-  if (value < 35) {
+  if (value < 30) {
     return Colors.red;
+  } else if (value < 40) {
+    return Colors.orange;
+  } else if (value < 55) {
+    return Colors.blueGrey;
   } else if (value < 65) {
-    return Colors.yellow;
-  } else {
+    return Colors.lightGreen;
+  } else if (value < 90){
     return Colors.green;
+  } else {
+    return Colors.green.shade900;
   }
 }
